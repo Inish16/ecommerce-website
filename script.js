@@ -1268,5 +1268,78 @@ window.addEventListener('DOMContentLoaded', function () {
   if (document.getElementById('returnOrderId')) {
     initReturnPage();
   }
+  if (document.getElementById('latestDropsSlider')) {
+    initHomepageSliders();
+    setTimeout(attachReveal, 100);
+  }
 });
+
+/* ========== HOMEPAGE SLIDERS ========== */
+
+function initHomepageSliders() {
+  if (typeof PRODUCTS === 'undefined') return;
+
+  // 1. Latest Drops (first 8 products)
+  var latest = PRODUCTS.slice(0, 8);
+  renderSliderItems('latestDropsSlider', latest);
+
+  // 2. Bestsellers (products with "Bestseller" badge)
+  var bestsellers = PRODUCTS.filter(function(p) { return p.badge === 'Bestseller'; }).slice(0, 8);
+  renderSliderItems('bestsellersSlider', bestsellers);
+
+  // 3. Summer Collection (Bikinis and summer-themed items)
+  var summer = PRODUCTS.filter(function(p) {
+    var name = p.name.toLowerCase();
+    var desc = p.description.toLowerCase();
+    return p.catSlug === 'bikini' || 
+           p.catSlug === 'western' ||
+           name.includes('summer') || name.includes('linen') || name.includes('beach') || name.includes('swim') ||
+           desc.includes('summer') || desc.includes('linen') || desc.includes('beach') || desc.includes('swim');
+  }).slice(0, 10);
+  
+  if (summer.length < 4) {
+    var extra = PRODUCTS.filter(function(p) { return summer.indexOf(p) === -1; }).slice(0, 4);
+    summer = summer.concat(extra);
+  }
+  renderSliderItems('summerSlider', summer);
+}
+
+function renderSliderItems(containerId, products) {
+  var container = document.getElementById(containerId);
+  if (!container) return;
+  
+  var html = '';
+  products.forEach(function(p) {
+    html += '<div class="product-card slider-card reveal">' +
+      '<a href="product.html?id=' + p.id + '">' +
+      '<div class="product-img-wrap">' +
+        '<img src="' + p.image + '" alt="' + p.name + '" loading="lazy">' +
+        (p.badge ? '<span class="product-badge">' + p.badge + '</span>' : '') +
+        '<div class="product-overlay"></div>' +
+      '</div>' +
+      '</a>' +
+      '<div class="product-info">' +
+        '<p class="product-tag">' + p.category + '</p>' +
+        '<h3 class="product-name"><a href="product.html?id=' + p.id + '">' + p.name + '</a></h3>' +
+        '<p class="product-price">' + p.price + '</p>' +
+      '</div>' +
+      '<button type="button" class="product-action" onclick="addToCart(\'' + p.id + '\', \'M\', \'' + (p.colorNames[0] || 'Default') + '\', 1)">Add to Cart</button>' +
+    '</div>';
+  });
+  container.innerHTML = html;
+}
+
+function scrollSlider(sliderId, direction) {
+  var slider = document.getElementById(sliderId);
+  if (slider) {
+    var card = slider.querySelector('.product-card');
+    var scrollAmount = 320;
+    if (card) {
+      var style = window.getComputedStyle(card);
+      var margin = parseFloat(style.marginLeft) + parseFloat(style.marginRight);
+      scrollAmount = (card.offsetWidth + (isNaN(margin) ? 24 : margin));
+    }
+    slider.scrollBy({ left: scrollAmount * direction, behavior: 'smooth' });
+  }
+}
 

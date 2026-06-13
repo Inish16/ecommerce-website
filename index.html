@@ -255,56 +255,71 @@
     </div>
   </section>
 
-  <!-- Featured Products -->
-  <section class="products-section">
+  <!-- Featured Products / LATEST DROPS -->
+  <section class="products-section slider-section" id="latestDropsSection">
     <div class="products-header">
       <div class="reveal">
-        <span class="section-label">Featured Collection</span>
+        <span class="section-label">Featured Drop</span>
         <h2 class="section-title">LATEST DROPS</h2>
       </div>
-      <a href="products.html" class="btn-outline reveal">View All →</a>
+      <div class="slider-controls">
+        <button type="button" class="slider-arrow prev" onclick="scrollSlider('latestDropsSlider', -1)" aria-label="Previous Products">
+          <svg viewBox="0 0 24 24" width="20" height="20"><polyline points="15 18 9 12 15 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button type="button" class="slider-arrow next" onclick="scrollSlider('latestDropsSlider', 1)" aria-label="Next Products">
+          <svg viewBox="0 0 24 24" width="20" height="20"><polyline points="9 18 15 12 9 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
     </div>
-    <div class="products-grid">
-      <div class="product-card reveal">
-        <div class="product-img-wrap">
-          <img
-            src="https://images.unsplash.com/photo-1522706604291-210a56c3b376?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="Urban Graphic Tee - Premium Custom Design">
-          <div class="product-overlay"></div>
-        </div>
-        <div class="product-info">
-          <p class="product-tag">Graphic Tee</p>
-          <h3 class="product-name">Urban Drift Collection</h3>
-          <p class="product-price">Starting ₹499</p>
-        </div>
-        <a href="contact.html" class="product-action">Order Now</a>
+    <div class="slider-container-wrap">
+      <div class="product-slider" id="latestDropsSlider">
+        <!-- Rendered dynamically -->
       </div>
-      <div class="product-card reveal">
-        <div class="product-img-wrap">
-          <img src="https://images.unsplash.com/photo-1622812653542-e7ee193002ac"
-            alt="Oversized Premium Tee - Comfortable Fit">
-          <div class="product-overlay"></div>
-        </div>
-        <div class="product-info">
-          <p class="product-tag">Oversized</p>
-          <h3 class="product-name">Minimal Oversized Drop</h3>
-          <p class="product-price">Starting ₹649</p>
-        </div>
-        <a href="contact.html" class="product-action">Order Now</a>
+    </div>
+  </section>
+
+  <!-- Bestsellers Section -->
+  <section class="products-section slider-section" id="bestsellersSection">
+    <div class="products-header">
+      <div class="reveal">
+        <span class="section-label">Popular Demands</span>
+        <h2 class="section-title">BESTSELLERS</h2>
       </div>
-      <div class="product-card reveal">
-        <div class="product-img-wrap">
-          <img
-            src="https://images.unsplash.com/photo-1598992616143-cbe6956b237d?q=80&w=1289&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="Corporate T-shirts - Bulk Order Ready">
-          <div class="product-overlay"></div>
-        </div>
-        <div class="product-info">
-          <p class="product-tag">Corporate</p>
-          <h3 class="product-name">Corporate Identity Pack</h3>
-          <p class="product-price">Bulk pricing</p>
-        </div>
-        <a href="contact.html" class="product-action">Get Quote</a>
+      <div class="slider-controls">
+        <button type="button" class="slider-arrow prev" onclick="scrollSlider('bestsellersSlider', -1)" aria-label="Previous Products">
+          <svg viewBox="0 0 24 24" width="20" height="20"><polyline points="15 18 9 12 15 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button type="button" class="slider-arrow next" onclick="scrollSlider('bestsellersSlider', 1)" aria-label="Next Products">
+          <svg viewBox="0 0 24 24" width="20" height="20"><polyline points="9 18 15 12 9 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="slider-container-wrap">
+      <div class="product-slider" id="bestsellersSlider">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Summer Collection Section -->
+  <section class="products-section slider-section" id="summerSection">
+    <div class="products-header">
+      <div class="reveal">
+        <span class="section-label">Seasonal Vibe</span>
+        <h2 class="section-title">SUMMER COLLECTION</h2>
+      </div>
+      <div class="slider-controls">
+        <button type="button" class="slider-arrow prev" onclick="scrollSlider('summerSlider', -1)" aria-label="Previous Products">
+          <svg viewBox="0 0 24 24" width="20" height="20"><polyline points="15 18 9 12 15 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button type="button" class="slider-arrow next" onclick="scrollSlider('summerSlider', 1)" aria-label="Next Products">
+          <svg viewBox="0 0 24 24" width="20" height="20"><polyline points="9 18 15 12 9 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="slider-container-wrap">
+      <div class="product-slider" id="summerSlider">
+        <!-- Rendered dynamically -->
       </div>
     </div>
   </section>
