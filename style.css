@@ -654,6 +654,129 @@ select {
   }
 }
 
+/* ========== COLLECTIONS ========== */
+.collections-section {
+  padding: 110px 5%;
+  border-top: 1px solid var(--white-06);
+}
+
+.collections-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.collection-card {
+  position: relative;
+  overflow: hidden;
+  height: 540px;
+  border-radius: var(--radius);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: flex-end;
+  padding: 40px;
+  cursor: pointer;
+  background-color: #1a1a1a;
+  transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.collection-card:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  transform: translateY(-5px);
+}
+
+.collection-bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.collection-card:hover .collection-bg-img {
+  transform: scale(1.06);
+}
+
+.collection-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(17, 17, 17, 0) 35%, rgba(17, 17, 17, 0.7) 65%, rgba(17, 17, 17, 0.95) 90%);
+  z-index: 2;
+  transition: all 0.6s var(--t);
+}
+
+.collection-card:hover .collection-overlay {
+  background: linear-gradient(180deg, rgba(17, 17, 17, 0) 25%, rgba(17, 17, 17, 0.75) 60%, rgba(17, 17, 17, 0.98) 85%);
+}
+
+.collection-content {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+}
+
+.collection-tag {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 12px;
+}
+
+.collection-name {
+  font-family: var(--font-title);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--white);
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+}
+
+.collection-desc {
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.65);
+  margin-bottom: 28px;
+  transition: color 0.3s var(--t);
+}
+
+.collection-card:hover .collection-desc {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.collection-link {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--white);
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  border-bottom: 2px solid var(--orange);
+  padding-bottom: 4px;
+  transition: all 0.3s var(--t);
+}
+
+.collection-card:hover .collection-link {
+  color: var(--orange);
+  border-bottom-color: var(--white);
+  padding-left: 5px;
+}
+
 /* ========== BENEFITS ========== */
 .benefits-section {
   padding: 110px 5%;
@@ -3022,6 +3145,25 @@ select {
     display: flex
   }
 
+  .collections-section {
+    padding: 80px 5%;
+  }
+
+  .collections-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-top: 36px;
+  }
+
+  .collection-card {
+    height: 440px;
+    padding: 30px;
+  }
+
+  .collection-name {
+    font-size: 32px;
+  }
+
   .benefits-section {
     grid-template-columns: 1fr;
     gap: 36px;
@@ -3173,6 +3315,15 @@ select {
 }
 
 @media(max-width:580px) {
+
+  .collection-card {
+    height: 380px;
+    padding: 24px;
+  }
+
+  .collection-name {
+    font-size: 28px;
+  }
 
   .qv-modal {
     width: 96%;

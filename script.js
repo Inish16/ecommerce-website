@@ -124,9 +124,12 @@ function getFilteredProducts() {
   if (_currentAudience === 'all') {
     if (_currentCategory === 'all') {
       products = PRODUCTS.slice();
-    } else {
+    } else if (['men', 'women', 'boys', 'girls'].indexOf(_currentCategory) !== -1) {
       /* _currentCategory is actually an audience name when on "All" tab */
       products = getProductsByAudience(_currentCategory);
+    } else {
+      /* _currentCategory is a specific category slug (e.g. 'shirts', 'tshirts') across all audiences */
+      products = PRODUCTS.filter(function(p) { return p.catSlug === _currentCategory; });
     }
   } else {
     products = getProductsByCategory(_currentAudience, _currentCategory);
@@ -1217,7 +1220,36 @@ window.addEventListener('DOMContentLoaded', function () {
 
   /* Init page-specific logic */
   if (document.getElementById('listingsGrid') && document.getElementById('audienceTabs')) {
-    buildCategoryPills('all');
+    var params = new URLSearchParams(window.location.search);
+    var urlAudience = params.get('audience') || 'all';
+    var urlCategory = params.get('category') || 'all';
+
+    _currentAudience = urlAudience;
+    _currentCategory = urlCategory;
+
+    // Update active state in audience tabs
+    document.querySelectorAll('.audience-tab').forEach(function(b) {
+      if (b.getAttribute('data-audience') === urlAudience) {
+        b.classList.add('active');
+      } else {
+        b.classList.remove('active');
+      }
+    });
+
+    // Rebuild the category pills
+    buildCategoryPills(urlAudience);
+
+    // Set active category pill if not 'all'
+    if (urlCategory !== 'all') {
+      document.querySelectorAll('#filterBar .filter-btn').forEach(function(b) {
+        if (b.getAttribute('data-filter') === urlCategory) {
+          b.classList.add('active');
+        } else {
+          b.classList.remove('active');
+        }
+      });
+    }
+
     renderProductGrid();
   }
   if (document.getElementById('pdMainImg')) {
