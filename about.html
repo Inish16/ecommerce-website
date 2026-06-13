@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="About T-SHIRT - Learn our story, mission, and the craft behind premium custom apparel.">
+  <meta name="keywords" content="about us, custom t-shirt company, premium apparel, india">
+  <title>About Us - T-SHIRT | Premium Custom & Printed Tees</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,300&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ====== NAVBAR ====== -->
+  <nav id="mainNav" aria-label="Primary navigation">
+    <a href="index.html" class="nav-logo">T<span class="o">-</span>SHIRT</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="cart.html" class="nav-cart" onclick="navCartClick(event)" aria-label="Cart">
+        <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        <span class="cart-badge" id="cartBadge">0</span>
+      </a>
+      <a href="contact.html" class="btn-nav">Get Quote</a>
+    </div>
+    <button class="hamburger" id="hamburger" type="button" aria-label="Open menu" aria-controls="mobileMenu"
+      aria-expanded="false" onclick="toggleMobile()">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="products.html">Products</a>
+    <a href="contact.html">Contact</a>
+    <a href="cart.html">Cart</a>
+    <a href="contact.html" class="btn-mob">Get Quote</a>
+  </div>
+
+  <!-- ================================================================ -->
+  <!-- PAGE: ABOUT -->
+  <!-- ================================================================ -->
+
+  <section class="page-hero" aria-label="About hero">
+    <img src="https://images.unsplash.com/photo-1503341733017-1901578f9f1e?w=1600&q=85&fit=crop&crop=center"
+      alt="Premium fashion T-shirts" class="page-hero-img">
+    <div class="page-hero-grad"></div>
+    <span class="page-hero-word" aria-hidden="true">ABOUT</span>
+    <div class="page-hero-content">
+      <span class="section-label">Our Story</span>
+      <h1 class="section-title" style="font-size:clamp(54px,9vw,120px)">WE ARE<br>T-SHIRT</h1>
+      <p class="section-sub">A premium custom apparel brand built on obsession with quality, craft, and the belief
+        that what you wear says everything about who you are.</p>
+    </div>
+  </section>
+
+  <section class="about-story-sec">
+    <div class="story-img reveal">
+      <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=900&q=90&fit=crop&crop=center"
+        alt="T-shirt printing process in studio">
+    </div>
+    <div class="reveal">
+      <span class="section-label">Brand Story</span>
+      <h2 class="section-title">FROM ONE MACHINE TO THOUSANDS OF STORIES</h2>
+      <p class="section-sub" style="margin-bottom:18px">It started in 2018 with a single DTG printer, a 200 sq ft
+        room, and an obsession with print quality that most vendors ignored. We believed custom T-shirts deserved the
+        same premium treatment as luxury fashion — meticulous craftsmanship, premium materials, and attention to every
+        thread.</p>
+      <p class="section-sub" style="margin-bottom:32px">Six years later, we've printed over 500,000 T-shirts for
+        15,000+ happy customers across India — from solo creators to Fortune 500 companies. The machine has changed.
+        The obsession hasn't.</p>
+      <a href="contact.html" class="btn-primary">Work With Us</a>
+    </div>
+  </section>
+
+  <section class="mission-sec">
+    <div class="reveal" style="text-align:center">
+      <span class="section-label">Our Mission</span>
+      <h2 class="section-title">QUALITY WITHOUT COMPROMISE</h2>
+      <p class="section-sub" style="margin:0 auto;text-align:center">Every decision we make — fabric selection, print
+        technique, color calibration — is guided by one principle: would we wear this ourselves?</p>
+    </div>
+    <div class="mission-grid">
+      <div class="mission-card reveal">
+        <div class="mission-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="1" />
+            <circle cx="19" cy="12" r="1" />
+            <circle cx="5" cy="12" r="1" />
+            <path d="M12 5v14" />
+            <path d="M5.64 5.64l9.88 9.88" />
+            <path d="M18.36 5.64l-9.88 9.88" />
+          </svg></div>
+        <h3>Precision Printing</h3>
+        <p>We invest in the best equipment and calibrate our color profiles to ensure your design looks exactly as
+          intended — every single time.</p>
+      </div>
+      <div class="mission-card reveal">
+        <div class="mission-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 3v18" />
+            <path d="M6 3c0 0 2 1 6 1s6-1 6-1" />
+            <path d="M6 21c0 0 2-1 6-1s6 1 6 1" />
+            <path d="M12 3v18" />
+            <path d="M18 3c0 0 2 1 2 9s-2 9-2 9" />
+          </svg></div>
+        <h3>Premium Materials</h3>
+        <p>180–220 GSM premium ring-spun cotton, eco-friendly inks. Soft, durable, and responsible — because quality
+          means doing it right.</p>
+      </div>
+      <div class="mission-card reveal">
+        <div class="mission-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+            <circle cx="9" cy="7" r="4" />
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+          </svg></div>
+        <h3>Partnership Mindset</h3>
+        <p>We don't treat you as an order number. We invest in understanding your brand, your audience, and your goals
+          — and deliver accordingly.</p>
+      </div>
+      <div class="mission-card reveal">
+        <div class="mission-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+          </svg></div>
+        <h3>Speed Without Compromise</h3>
+        <p>Fast doesn't mean careless. Our optimized production pipeline delivers in 5–7 days without cutting corners
+          on quality.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="diff-sec">
+    <div class="reveal">
+      <span class="section-label">What Makes Us Different</span>
+      <h2 class="section-title">THE T-SHIRT DIFFERENCE</h2>
+    </div>
+    <div class="diff-list">
+      <div class="diff-item reveal">
+        <div class="diff-num">01</div>
+        <div class="diff-title">Better Fabric</div>
+        <div class="diff-desc">We use 180–220 GSM premium ring-spun cotton that's pre-shrunk and color-fast. Your tee
+          feels luxurious from the first wear to the 100th wash.</div>
+        <div class="diff-check"><svg viewBox="0 0 14 14">
+            <polyline points="2,7 6,11 12,3" />
+          </svg></div>
+      </div>
+      <div class="diff-item reveal">
+        <div class="diff-num">02</div>
+        <div class="diff-title">Premium Printing</div>
+        <div class="diff-desc">DTG, screen print, sublimation, and embroidery — we choose the right method for your
+          design and deliver pixel-perfect results every time.</div>
+        <div class="diff-check"><svg viewBox="0 0 14 14">
+            <polyline points="2,7 6,11 12,3" />
+          </svg></div>
+      </div>
+      <div class="diff-item reveal">
+        <div class="diff-num">03</div>
+        <div class="diff-title">Unique Designs</div>
+        <div class="diff-desc">Our in-house design team creates fashion-forward graphics that go beyond clipart. We
+          make tees people genuinely want to wear.</div>
+        <div class="diff-check"><svg viewBox="0 0 14 14">
+            <polyline points="2,7 6,11 12,3" />
+          </svg></div>
+      </div>
+      <div class="diff-item reveal">
+        <div class="diff-num">04</div>
+        <div class="diff-title">Fast Delivery</div>
+        <div class="diff-desc">5–7 day standard turnaround. Rush orders in 2–3 days. Pan-India delivery with real-time
+          tracking so you're never in the dark.</div>
+        <div class="diff-check"><svg viewBox="0 0 14 14">
+            <polyline points="2,7 6,11 12,3" />
+          </svg></div>
+      </div>
+      <div class="diff-item reveal">
+        <div class="diff-num">05</div>
+        <div class="diff-title">Bulk Order Support</div>
+        <div class="diff-desc">Dedicated account managers, volume pricing from just 20 pieces, consistent quality
+          across every unit — even in 10,000+ orders.</div>
+        <div class="diff-check"><svg viewBox="0 0 14 14">
+            <polyline points="2,7 6,11 12,3" />
+          </svg></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats-sec">
+    <div class="reveal" style="text-align:center">
+      <span class="section-label">By The Numbers</span>
+      <h2 class="section-title">WHY CUSTOMERS CHOOSE US</h2>
+    </div>
+    <div class="stats-grid">
+      <div class="stat-card reveal">
+        <div class="stat-num">15K+</div>
+        <div class="stat-label">Happy Customers</div>
+      </div>
+      <div class="stat-card reveal">
+        <div class="stat-num">500K+</div>
+        <div class="stat-label">Orders Delivered</div>
+      </div>
+      <div class="stat-card reveal">
+        <div class="stat-num">200+</div>
+        <div class="stat-label">Design Variations</div>
+      </div>
+      <div class="stat-card reveal">
+        <div class="stat-num">800+</div>
+        <div class="stat-label">Bulk Clients</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <span class="section-label" style="display:block;text-align:center">Join Thousands of Customers</span>
+    <h2 class="section-title">START YOUR CUSTOM ORDER</h2>
+    <p class="section-sub">Join 15,000+ customers who chose quality, speed, and creativity. Your perfect tee is one
+      click away.</p>
+    <div class="cta-btns">
+      <a href="contact.html" class="btn-primary">Get Started Today</a>
+      <a href="products.html" class="btn-outline">View Collection</a>
+    </div>
+  </section>
+
+  <!-- ================================================================ -->
+  <!-- SHARED FOOTER -->
+  <!-- ================================================================ -->
+  <footer id="siteFooter">
+    <div class="footer-top">
+      <div>
+        <a href="index.html" class="footer-logo">T<span class="o">-</span>SHIRT</a>
+        <p class="footer-desc">Premium printed, personalized, and customized T-shirts for individuals, brands, creators,
+          events, and businesses. Wear your identity.</p>
+        <div class="newsletter-wrap">
+          <input type="email" id="newsletter-email" placeholder="Your email address" aria-label="Newsletter email">
+          <button onclick="subscribeNewsletter()">Subscribe</button>
+        </div>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Quick Links</p>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Customer Care</p>
+        <ul>
+          <li><a href="track-order.html">Track Your Order</a></li>
+          <li><a href="returns.html">Returns &amp; Exchanges</a></li>
+          <li><a href="shipping.html">Shipping Policy</a></li>
+          <li><a href="contact.html">Help &amp; Support</a></li>
+          
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Contact</p>
+        <ul>
+          <li><a href="mailto:hello@tshirt.in">hello@tshirt.in</a></li>
+          <li><a href="tel:+919876543210">+91 98765 43210</a></li>
+          <li><a href="https://wa.me/919876543210" target="_blank" rel="noopener">WhatsApp Us</a></li>
+          <li><a href="https://maps.google.com/?q=Andheri+East+Mumbai" target="_blank" rel="noopener">Mumbai, India</a>
+          </li>
+          <li><a href="contact.html">Mon–Sat 9am–7pm</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 T-SHIRT. All rights reserved. Premium Custom Apparel. · <a href="returns.html" style="color:var(--white-45)">Return Policy</a> · <a href="shipping.html" style="color:var(--white-45)">Shipping</a></p>
+      <div class="social-row">
+        <a href="https://instagram.com/tshirtbranding" target="_blank" rel="noopener" class="social-btn"
+          aria-label="Instagram">
+          <svg viewBox="0 0 24 24">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke-width="3" />
+          </svg>
+        </a>
+        <a href="https://facebook.com/tshirtbranding" target="_blank" rel="noopener" class="social-btn"
+          aria-label="Facebook">
+          <svg viewBox="0 0 24 24">
+            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
+          </svg>
+        </a>
+        <a href="https://wa.me/919876543210" target="_blank" rel="noopener" class="social-btn" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" />
+          </svg>
+        </a>
+        <a href="https://pinterest.com/tshirtbranding" target="_blank" rel="noopener" class="social-btn"
+          aria-label="Pinterest">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M12 2a10 10 0 00-3.6 19.3c-.1-.9-.2-2.3.1-3.3.2-.8 1.5-6.4 1.5-6.4s-.4-.8-.4-1.9c0-1.8 1-3.1 2.3-3.1 1.1 0 1.6.8 1.6 1.8 0 1.1-.7 2.7-1 4.1-.3 1.2.6 2.2 1.8 2.2 2.1 0 3.7-2.2 3.7-5.5 0-2.9-2-4.9-4.9-4.9-3.3 0-5.3 2.5-5.3 5 0 1 .4 2 .9 2.6.1.1.1.2.1.4l-.3 1.3c-.1.2-.2.3-.4.2-1.5-.7-2.4-2.9-2.4-4.6 0-3.7 2.7-7.2 7.9-7.2 4.1 0 7.3 2.9 7.3 6.8 0 4.1-2.6 7.4-6.1 7.4-1.2 0-2.3-.6-2.7-1.3l-.7 2.8c-.3 1-.9 2.1-1.4 2.9A10 10 0 1012 2z" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ====== SIDEBAR CART ====== -->
+  <div class="cart-overlay" id="cartOverlay" onclick="closeSidebarCart()"></div>
+  <div class="cart-sidebar" id="cartSidebar">
+    <div class="sc-header">
+      <div><span class="sc-title">YOUR CART</span><span class="sc-count" id="sidebarCartCount">0</span></div>
+      <button type="button" class="sc-close" onclick="closeSidebarCart()" aria-label="Close cart">
+        <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="sc-empty" id="sidebarEmpty">
+      <svg class="sc-empty-icon" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+      <p>Your cart is empty</p>
+      <a href="products.html" class="btn-primary">Browse Products</a>
+    </div>
+    <div id="sidebarFilled" style="display:none;flex-direction:column;flex:1">
+      <div class="sc-items" id="sidebarCartItems"></div>
+      <div class="sc-footer">
+        <div class="sc-subtotal-row">
+          <span class="sc-subtotal-label">Subtotal</span>
+          <span class="sc-subtotal-val" id="sidebarSubtotal">₹0</span>
+        </div>
+        <div class="sc-btns">
+          <a href="cart.html" class="btn-primary">View Cart</a>
+          <a href="checkout.html" class="btn-outline">Checkout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="products-data.js"></script>
+  <script src="cart.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Returns & Exchange Policy - Easy 7-day returns and exchanges on T-SHIRT products. Request a return or exchange online.">
+  <title>Returns & Exchanges - T-SHIRT | Premium Custom &amp; Printed Tees</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ====== NAVBAR ====== -->
+  <nav id="mainNav" aria-label="Primary navigation">
+    <a href="index.html" class="nav-logo">T<span class="o">-</span>SHIRT</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="cart.html" class="nav-cart" onclick="navCartClick(event)" aria-label="Cart">
+        <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        <span class="cart-badge" id="cartBadge">0</span>
+      </a>
+      <a href="contact.html" class="btn-nav">Get Quote</a>
+    </div>
+    <button class="hamburger" id="hamburger" type="button" aria-label="Open menu" aria-controls="mobileMenu" aria-expanded="false" onclick="toggleMobile()">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="products.html">Products</a>
+    <a href="contact.html">Contact</a>
+    <a href="cart.html">Cart</a>
+    <a href="contact.html" class="btn-mob">Get Quote</a>
+  </div>
+
+  <!-- Hero -->
+  <section class="page-hero" aria-label="Returns hero">
+    <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=1600&q=85&fit=crop&crop=center" alt="Returns and exchanges" class="page-hero-img">
+    <div class="page-hero-grad"></div>
+    <span class="page-hero-word" aria-hidden="true">RETURNS</span>
+    <div class="page-hero-content">
+      <span class="section-label">Customer First</span>
+      <h1 class="section-title" style="font-size:clamp(54px,9vw,120px)">RETURNS &<br>EXCHANGES</h1>
+      <p class="section-sub">Your satisfaction is our priority. Easy returns within 7 days.</p>
+    </div>
+  </section>
+
+  <!-- Policy Content -->
+  <div class="policy-layout">
+
+    <div class="policy-intro reveal">
+      <p>We want you to be completely happy with your purchase. If something isn't right, our simple return and exchange process has you covered — no hassle, no stress.</p>
+    </div>
+
+    <!-- Policy Cards -->
+    <div class="policy-grid">
+      <div class="policy-card reveal">
+        <div class="policy-card-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <h3>7-Day Return Window</h3>
+        <p>You have 7 days from the delivery date to initiate a return or exchange. Just log your Order ID and we'll guide you through the process.</p>
+      </div>
+      <div class="policy-card reveal">
+        <div class="policy-card-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <h3>Conditions for Returns</h3>
+        <ul>
+          <li>Item must be unused and unwashed</li>
+          <li>Original tags must be attached</li>
+          <li>Original packaging required</li>
+          <li>No stains, odors, or damage</li>
+        </ul>
+      </div>
+      <div class="policy-card reveal">
+        <div class="policy-card-icon"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></div>
+        <h3>Non-Returnable Items</h3>
+        <ul>
+          <li>Customized / personalized T-shirts</li>
+          <li>Bulk orders (10+ units)</li>
+          <li>Items on clearance / sale</li>
+          <li>Items damaged by the customer</li>
+        </ul>
+      </div>
+      <div class="policy-card reveal">
+        <div class="policy-card-icon"><svg viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+        <h3>Refund & Exchange</h3>
+        <p>Refunds are processed within 5–7 business days after we receive and inspect the returned item. Exchanges ship out within 3–5 business days.</p>
+      </div>
+    </div>
+
+    <!-- How It Works -->
+    <div style="text-align:center" class="reveal">
+      <span class="section-label">How It Works</span>
+      <h2 class="section-title">SIMPLE 4-STEP PROCESS</h2>
+    </div>
+
+    <div class="return-steps">
+      <div class="return-step reveal">
+        <div class="return-step-num">1</div>
+        <h4>Enter Order ID</h4>
+        <p>Find your Order ID from your order confirmation.</p>
+      </div>
+      <div class="return-step reveal">
+        <div class="return-step-num">2</div>
+        <h4>Select Items</h4>
+        <p>Choose which items you'd like to return or exchange.</p>
+      </div>
+      <div class="return-step reveal">
+        <div class="return-step-num">3</div>
+        <h4>Submit Request</h4>
+        <p>Tell us the reason and submit your request.</p>
+      </div>
+      <div class="return-step reveal">
+        <div class="return-step-num">4</div>
+        <h4>Ship It Back</h4>
+        <p>We'll arrange pickup or share a prepaid return label.</p>
+      </div>
+    </div>
+
+    <!-- Return Request Form -->
+    <div class="return-form-card reveal" id="returnFormCard">
+      <h2>REQUEST A RETURN / EXCHANGE</h2>
+      <p class="return-form-intro">Enter your Order ID below to get started. We'll load your order details so you can select items to return or exchange.</p>
+
+      <form onsubmit="handleReturnRequest(event)">
+        <div class="order-lookup-row">
+          <input class="form-input" type="text" id="returnOrderId" placeholder="Enter your Order ID (e.g. TS-XXXXXX)" style="font-family:var(--font-mono);letter-spacing:2px;text-transform:uppercase">
+          <button type="button" class="btn-primary" onclick="lookupOrderForReturn()" style="white-space:nowrap">Look Up Order</button>
+        </div>
+
+        <div id="returnLookupResult"></div>
+
+        <div id="returnFormFields" style="display:none">
+
+          <div class="form-group">
+            <label class="form-label">What would you like to do?</label>
+          </div>
+          <div class="return-type-row">
+            <button type="button" class="return-type-btn active" data-type="return" onclick="selectReturnType('return')">Return for Refund</button>
+            <button type="button" class="return-type-btn" data-type="exchange" onclick="selectReturnType('exchange')">Exchange Item</button>
+          </div>
+
+          <div class="exchange-fields" id="exchangeFields">
+            <div class="form-group">
+              <label class="form-label" for="exchange-size">Preferred Size</label>
+              <select class="form-input" id="exchange-size">
+                <option value="">Select size…</option>
+                <option>S</option><option>M</option><option>L</option><option>XL</option><option>XXL</option><option>3XL</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="exchange-color">Preferred Color</label>
+              <input class="form-input" type="text" id="exchange-color" placeholder="e.g. Black, White">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="returnReason">Reason for Return / Exchange *</label>
+            <select class="form-input" id="returnReason" required>
+              <option value="">Select a reason…</option>
+              <option>Wrong size</option>
+              <option>Defective / Damaged</option>
+              <option>Not as expected</option>
+              <option>Changed my mind</option>
+              <option>Received wrong item</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="returnComments">Additional Comments (optional)</label>
+            <textarea class="form-input" id="returnComments" rows="3" placeholder="Describe the issue or provide any additional details…"></textarea>
+          </div>
+
+          <button type="submit" class="btn-primary" style="width:100%;margin-top:10px">Submit Return Request</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Return Success -->
+    <div class="return-success" id="returnSuccess">
+      <div class="success-check">
+        <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <h2 class="section-title" style="font-size:38px">REQUEST SUBMITTED!</h2>
+      <p>Your return/exchange request has been received. Our team will review it and get back to you within 24 hours.</p>
+      <p class="return-id" id="returnIdDisplay">RT-XXXXXX</p>
+      <p>Keep this Return ID for your records. You'll receive a confirmation email shortly.</p>
+      <div style="margin-top:24px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+        <a href="track-order.html" class="btn-primary">Track Orders</a>
+        <a href="products.html" class="btn-outline">Continue Shopping</a>
+      </div>
+    </div>
+
+    <!-- FAQ -->
+    <div style="text-align:center;margin-bottom:32px" class="reveal">
+      <span class="section-label">Common Questions</span>
+      <h2 class="section-title">RETURN FAQs</h2>
+    </div>
+
+    <div class="faq-list reveal" style="margin-bottom:60px">
+      <div class="faq-item">
+        <button class="faq-q" type="button" onclick="toggleFaq(this)" aria-expanded="false">
+          <span>Can I return a custom-printed T-shirt?</span>
+          <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a">
+          <p>Custom-printed and personalized T-shirts are non-returnable unless there is a manufacturing defect or print error on our end. In such cases, please contact us with photos of the issue.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button" onclick="toggleFaq(this)" aria-expanded="false">
+          <span>How long does the refund take?</span>
+          <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a">
+          <p>Once we receive and inspect the returned item, refunds are processed within 5–7 business days. The amount will be credited back to your original payment method.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button" onclick="toggleFaq(this)" aria-expanded="false">
+          <span>What if I received a damaged product?</span>
+          <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a">
+          <p>If your product arrives damaged, please contact us within 48 hours with photos. We'll arrange a free replacement or full refund — no questions asked.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button" onclick="toggleFaq(this)" aria-expanded="false">
+          <span>Can I exchange for a different design?</span>
+          <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a">
+          <p>Yes, you can exchange for a different size or color of the same design. For a completely different design, we recommend returning the item for a refund and placing a new order.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button" onclick="toggleFaq(this)" aria-expanded="false">
+          <span>Who pays for return shipping?</span>
+          <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a">
+          <p>For defective or incorrect items, return shipping is free — we'll provide a prepaid label or arrange pickup. For change-of-mind returns, a flat ₹99 return shipping fee applies.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- CTA -->
+  <section class="cta-band">
+    <span class="section-label" style="display:block;text-align:center">Need More Help?</span>
+    <h2 class="section-title">STILL HAVE QUESTIONS?</h2>
+    <p class="section-sub">Our customer care team is available Mon–Sat, 9am–7pm IST to help with any return or exchange queries.</p>
+    <div class="cta-btns">
+      <a href="contact.html" class="btn-primary">Contact Support</a>
+      <a href="https://wa.me/919876543210" target="_blank" rel="noopener" class="btn-outline">WhatsApp Us</a>
+    </div>
+  </section>
+
+  <!-- Sidebar Cart -->
+  <div class="cart-overlay" id="cartOverlay" onclick="closeSidebarCart()"></div>
+  <div class="cart-sidebar" id="cartSidebar">
+    <div class="sc-header">
+      <div><span class="sc-title">YOUR CART</span><span class="sc-count" id="sidebarCartCount">0</span></div>
+      <button type="button" class="sc-close" onclick="closeSidebarCart()" aria-label="Close cart">
+        <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="sc-empty" id="sidebarEmpty">
+      <svg class="sc-empty-icon" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+      <p>Your cart is empty</p>
+      <a href="products.html" class="btn-primary">Browse Products</a>
+    </div>
+    <div id="sidebarFilled" style="display:none;flex-direction:column;flex:1">
+      <div class="sc-items" id="sidebarCartItems"></div>
+      <div class="sc-footer">
+        <div class="sc-subtotal-row">
+          <span class="sc-subtotal-label">Subtotal</span>
+          <span class="sc-subtotal-val" id="sidebarSubtotal">₹0</span>
+        </div>
+        <div class="sc-btns">
+          <a href="cart.html" class="btn-primary">View Cart</a>
+          <a href="checkout.html" class="btn-outline">Checkout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer id="siteFooter">
+    <div class="footer-top">
+      <div>
+        <a href="index.html" class="footer-logo">T<span class="o">-</span>SHIRT</a>
+        <p class="footer-desc">Premium printed, personalized, and customized T-shirts for individuals, brands, creators, events, and businesses. Wear your identity.</p>
+        <div class="newsletter-wrap">
+          <input type="email" id="newsletter-email" placeholder="Your email address" aria-label="Newsletter email">
+          <button onclick="subscribeNewsletter()">Subscribe</button>
+        </div>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Quick Links</p>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Customer Care</p>
+        <ul>
+          <li><a href="track-order.html">Track Your Order</a></li>
+          <li><a href="returns.html">Returns & Exchanges</a></li>
+          <li><a href="shipping.html">Shipping Policy</a></li>
+          <li><a href="contact.html">Help & Support</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Contact</p>
+        <ul>
+          <li><a href="mailto:hello@tshirt.in">hello@tshirt.in</a></li>
+          <li><a href="tel:+919876543210">+91 98765 43210</a></li>
+          <li><a href="https://wa.me/919876543210" target="_blank" rel="noopener">WhatsApp Us</a></li>
+          <li><a href="https://maps.google.com/?q=Andheri+East+Mumbai" target="_blank" rel="noopener">Mumbai, India</a></li>
+          <li><a href="contact.html">Mon–Sat 9am–7pm</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 T-SHIRT. All rights reserved. Premium Custom Apparel. · <a href="returns.html" style="color:var(--white-45)">Return Policy</a> · <a href="shipping.html" style="color:var(--white-45)">Shipping</a></p>
+      <div class="social-row">
+        <a href="https://instagram.com/tshirtbranding" target="_blank" rel="noopener" class="social-btn" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke-width="3"/></svg></a>
+        <a href="https://facebook.com/tshirtbranding" target="_blank" rel="noopener" class="social-btn" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+        <a href="https://wa.me/919876543210" target="_blank" rel="noopener" class="social-btn" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg></a>
+        <a href="https://pinterest.com/tshirtbranding" target="_blank" rel="noopener" class="social-btn" aria-label="Pinterest"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-3.6 19.3c-.1-.9-.2-2.3.1-3.3.2-.8 1.5-6.4 1.5-6.4s-.4-.8-.4-1.9c0-1.8 1-3.1 2.3-3.1 1.1 0 1.6.8 1.6 1.8 0 1.1-.7 2.7-1 4.1-.3 1.2.6 2.2 1.8 2.2 2.1 0 3.7-2.2 3.7-5.5 0-2.9-2-4.9-4.9-4.9-3.3 0-5.3 2.5-5.3 5 0 1 .4 2 .9 2.6.1.1.1.2.1.4l-.3 1.3c-.1.2-.2.3-.4.2-1.5-.7-2.4-2.9-2.4-4.6 0-3.7 2.7-7.2 7.9-7.2 4.1 0 7.3 2.9 7.3 6.8 0 4.1-2.6 7.4-6.1 7.4-1.2 0-2.3-.6-2.7-1.3l-.7 2.8c-.3 1-.9 2.1-1.4 2.9A10 10 0 1012 2z"/></svg></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="products-data.js"></script>
+  <script src="cart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

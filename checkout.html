@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Checkout - Complete your T-shirt order with shipping details and payment.">
+  <title>Checkout - T-SHIRT | Premium Custom &amp; Printed Tees</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ====== NAVBAR ====== -->
+  <nav id="mainNav" aria-label="Primary navigation">
+    <a href="index.html" class="nav-logo">T<span class="o">-</span>SHIRT</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="cart.html" class="nav-cart" aria-label="Cart">
+        <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        <span class="cart-badge" id="cartBadge">0</span>
+      </a>
+      <a href="contact.html" class="btn-nav">Get Quote</a>
+    </div>
+    <button class="hamburger" id="hamburger" type="button" aria-label="Open menu" aria-controls="mobileMenu" aria-expanded="false" onclick="toggleMobile()">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="products.html">Products</a>
+    <a href="contact.html">Contact</a>
+    <a href="cart.html">Cart</a>
+    <a href="contact.html" class="btn-mob">Get Quote</a>
+  </div>
+
+  <!-- ================================================================ -->
+  <!-- PAGE HERO -->
+  <!-- ================================================================ -->
+  <section class="page-hero" aria-label="Checkout hero" style="min-height:40vh">
+    <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=1600&q=85&fit=crop" alt="Checkout" class="page-hero-img">
+    <div class="page-hero-grad"></div>
+    <span class="page-hero-word" aria-hidden="true">CHECKOUT</span>
+    <div class="page-hero-content">
+      <span class="section-label">Almost There</span>
+      <h1 class="section-title" style="font-size:clamp(54px,9vw,120px)">CHECKOUT</h1>
+    </div>
+  </section>
+
+  <!-- ================================================================ -->
+  <!-- CHECKOUT CONTENT -->
+  <!-- ================================================================ -->
+  <div id="checkoutContent">
+    <div class="breadcrumb">
+      <a href="cart.html">← Back to Cart</a>
+    </div>
+
+    <div class="checkout-layout" style="padding-top:28px">
+
+      <!-- Checkout Form -->
+      <div class="checkout-form-card">
+        <h2>SHIPPING DETAILS</h2>
+        <form id="checkoutForm" onsubmit="handleCheckout(event)">
+
+          <h3 class="checkout-section-title">CONTACT INFORMATION</h3>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="co-name">Full Name *</label>
+              <input class="form-input" type="text" id="co-name" placeholder="Your full name" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="co-email">Email *</label>
+              <input class="form-input" type="email" id="co-email" placeholder="you@example.com" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="co-phone">Phone *</label>
+            <input class="form-input" type="tel" id="co-phone" placeholder="+91 98765 43210" required>
+          </div>
+
+          <h3 class="checkout-section-title">SHIPPING ADDRESS</h3>
+          <div class="form-group">
+            <label class="form-label" for="co-address">Street Address *</label>
+            <input class="form-input" type="text" id="co-address" placeholder="123 Main Street, Apt 4B" required>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="co-city">City *</label>
+              <input class="form-input" type="text" id="co-city" placeholder="Mumbai" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="co-state">State *</label>
+              <input class="form-input" type="text" id="co-state" placeholder="Maharashtra" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="co-pincode">Pincode *</label>
+            <input class="form-input" type="text" id="co-pincode" placeholder="400069" required>
+          </div>
+
+          <h3 class="checkout-section-title">PAYMENT METHOD</h3>
+          <div class="payment-methods">
+            <div class="payment-option active" data-method="cod" onclick="selectPaymentMethod('cod')">
+              <div class="payment-option-header">
+                <div class="payment-radio"><div class="payment-radio-dot"></div></div>
+                <div class="payment-option-icon"><svg viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div>
+                <span class="payment-option-label">Cash on Delivery</span>
+                <span class="payment-option-tag">+₹49</span>
+              </div>
+              <div class="payment-fields">
+                <p class="payment-note">Pay when your order arrives at your doorstep. A ₹49 COD handling fee will be added to your order total.</p>
+              </div>
+            </div>
+
+            <div class="payment-option" data-method="upi" onclick="selectPaymentMethod('upi')">
+              <div class="payment-option-header">
+                <div class="payment-radio"><div class="payment-radio-dot"></div></div>
+                <div class="payment-option-icon"><svg viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+                <span class="payment-option-label">UPI Payment</span>
+                <span class="payment-option-tag">No Fee</span>
+              </div>
+              <div class="payment-fields">
+                <div class="form-group">
+                  <label class="form-label" for="co-upi">UPI ID</label>
+                  <input class="form-input" type="text" id="co-upi" placeholder="yourname@upi">
+                </div>
+                <p class="payment-note">You will receive a payment request on your UPI app after placing the order.</p>
+              </div>
+            </div>
+
+            <div class="payment-option" data-method="card" onclick="selectPaymentMethod('card')">
+              <div class="payment-option-header">
+                <div class="payment-radio"><div class="payment-radio-dot"></div></div>
+                <div class="payment-option-icon"><svg viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/><line x1="6" y1="15" x2="10" y2="15"/></svg></div>
+                <span class="payment-option-label">Credit / Debit Card</span>
+                <span class="payment-option-tag">No Fee</span>
+              </div>
+              <div class="payment-fields">
+                <div class="form-group">
+                  <label class="form-label" for="co-card">Card Number</label>
+                  <input class="form-input" type="text" id="co-card" placeholder="1234 5678 9012 3456" maxlength="19">
+                </div>
+                <div class="payment-field-row">
+                  <div class="form-group">
+                    <label class="form-label" for="co-expiry">Expiry</label>
+                    <input class="form-input" type="text" id="co-expiry" placeholder="MM/YY" maxlength="5">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="co-cvv">CVV</label>
+                    <input class="form-input" type="text" id="co-cvv" placeholder="123" maxlength="4">
+                  </div>
+                </div>
+                <p class="payment-note">Your card details are securely processed. We do not store card information.</p>
+              </div>
+            </div>
+          </div>
+
+          <h3 class="checkout-section-title">ORDER NOTES</h3>
+          <div class="form-group">
+            <label class="form-label" for="co-notes">Special Instructions (optional)</label>
+            <textarea class="form-input" id="co-notes" rows="3" placeholder="Any special requests for your order…"></textarea>
+          </div>
+
+          <button type="submit" class="btn-primary" style="width:100%;margin-top:14px">Place Order</button>
+        </form>
+      </div>
+
+      <!-- Order Summary -->
+      <div class="order-summary">
+        <h3>YOUR ORDER</h3>
+
+        <div class="co-items" id="checkoutItems"></div>
+
+        <div class="os-divider"></div>
+
+        <div class="os-row">
+          <span class="os-row-label">Subtotal</span>
+          <span class="os-row-val" id="coSubtotal">₹0</span>
+        </div>
+        <div class="os-discount-row" id="coDiscount">
+          <span class="os-row-label">Discount</span>
+          <span class="os-row-val">-₹0</span>
+        </div>
+        <div class="os-row">
+          <span class="os-row-label">Shipping</span>
+          <span class="os-row-val" id="coShipping">₹99</span>
+        </div>
+        <div class="os-row" id="coCodFee" style="display:flex">
+          <span class="os-row-label">COD Fee</span>
+          <span class="os-row-val">₹49</span>
+        </div>
+
+        <div class="os-divider"></div>
+
+        <div class="os-row os-total">
+          <span class="os-row-label">Total</span>
+          <span class="os-row-val" id="coTotal">₹0</span>
+        </div>
+
+        <p style="font-size:11px;color:rgba(255,255,255,0.28);margin-top:16px;font-family:var(--font-mono);letter-spacing:0.5px;line-height:1.7">
+          Free shipping on orders above ₹999.<br>Estimated delivery: 5–7 business days.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================================================================ -->
+  <!-- CHECKOUT SUCCESS -->
+  <!-- ================================================================ -->
+  <div class="checkout-success" id="checkoutSuccess">
+    <div class="success-check">
+      <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+    </div>
+    <h2>ORDER PLACED!</h2>
+    <p>Thank you for your order. We'll send you a confirmation email with tracking details shortly.</p>
+    <p class="order-id" id="orderIdDisplay">TS-XXXXXX</p>
+
+    <div id="successOrderDetails"></div>
+
+    <div class="success-actions">
+      <a href="products.html" class="btn-primary">Continue Shopping</a>
+      <a href="track-order.html" class="btn-outline">Track Your Order</a>
+    </div>
+    <div class="success-links">
+      <a href="index.html">← Back to Home</a>
+      <a href="returns.html">Returns & Exchanges</a>
+    </div>
+  </div>
+
+  <!-- ================================================================ -->
+  <!-- SHARED FOOTER -->
+  <!-- ================================================================ -->
+  <footer id="siteFooter">
+    <div class="footer-top">
+      <div>
+        <a href="index.html" class="footer-logo">T<span class="o">-</span>SHIRT</a>
+        <p class="footer-desc">Premium printed, personalized, and customized T-shirts for individuals, brands, creators, events, and businesses. Wear your identity.</p>
+        <div class="newsletter-wrap">
+          <input type="email" id="newsletter-email" placeholder="Your email address" aria-label="Newsletter email">
+          <button onclick="subscribeNewsletter()">Subscribe</button>
+        </div>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Quick Links</p>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Customer Care</p>
+        <ul>
+          <li><a href="track-order.html">Track Your Order</a></li>
+          <li><a href="returns.html">Returns & Exchanges</a></li>
+          <li><a href="shipping.html">Shipping Policy</a></li>
+          <li><a href="contact.html">Help & Support</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Contact</p>
+        <ul>
+          <li><a href="mailto:hello@tshirt.in">hello@tshirt.in</a></li>
+          <li><a href="tel:+919876543210">+91 98765 43210</a></li>
+          <li><a href="https://wa.me/919876543210" target="_blank" rel="noopener">WhatsApp Us</a></li>
+          <li><a href="https://maps.google.com/?q=Andheri+East+Mumbai" target="_blank" rel="noopener">Mumbai, India</a></li>
+          <li><a href="contact.html">Mon–Sat 9am–7pm</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 T-SHIRT. All rights reserved. Premium Custom Apparel. · <a href="returns.html" style="color:var(--white-45)">Return Policy</a> · <a href="shipping.html" style="color:var(--white-45)">Shipping</a></p>
+      <div class="social-row">
+        <a href="https://instagram.com/tshirtbranding" target="_blank" rel="noopener" class="social-btn" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke-width="3"/></svg></a>
+        <a href="https://facebook.com/tshirtbranding" target="_blank" rel="noopener" class="social-btn" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+        <a href="https://wa.me/919876543210" target="_blank" rel="noopener" class="social-btn" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg></a>
+        <a href="https://pinterest.com/tshirtbranding" target="_blank" rel="noopener" class="social-btn" aria-label="Pinterest"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-3.6 19.3c-.1-.9-.2-2.3.1-3.3.2-.8 1.5-6.4 1.5-6.4s-.4-.8-.4-1.9c0-1.8 1-3.1 2.3-3.1 1.1 0 1.6.8 1.6 1.8 0 1.1-.7 2.7-1 4.1-.3 1.2.6 2.2 1.8 2.2 2.1 0 3.7-2.2 3.7-5.5 0-2.9-2-4.9-4.9-4.9-3.3 0-5.3 2.5-5.3 5 0 1 .4 2 .9 2.6.1.1.1.2.1.4l-.3 1.3c-.1.2-.2.3-.4.2-1.5-.7-2.4-2.9-2.4-4.6 0-3.7 2.7-7.2 7.9-7.2 4.1 0 7.3 2.9 7.3 6.8 0 4.1-2.6 7.4-6.1 7.4-1.2 0-2.3-.6-2.7-1.3l-.7 2.8c-.3 1-.9 2.1-1.4 2.9A10 10 0 1012 2z"/></svg></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="products-data.js"></script>
+  <script src="cart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

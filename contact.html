@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact T-SHIRT - Get in touch with us for custom T-shirt inquiries, bulk orders, and branding projects.">
+  <meta name="keywords" content="contact us, custom t-shirt quote, bulk orders, customer support">
+  <title>Contact Us - T-SHIRT | Premium Custom & Printed Tees</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,300&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ====== NAVBAR ====== -->
+  <nav id="mainNav" aria-label="Primary navigation">
+    <a href="index.html" class="nav-logo">T<span class="o">-</span>SHIRT</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="cart.html" class="nav-cart" onclick="navCartClick(event)" aria-label="Cart">
+        <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        <span class="cart-badge" id="cartBadge">0</span>
+      </a>
+      <a href="contact.html" class="btn-nav">Get Quote</a>
+    </div>
+    <button class="hamburger" id="hamburger" type="button" aria-label="Open menu" aria-controls="mobileMenu" aria-expanded="false" onclick="toggleMobile()">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="products.html">Products</a>
+    <a href="contact.html">Contact</a>
+    <a href="cart.html">Cart</a>
+    <a href="contact.html" class="btn-mob">Get Quote</a>
+  </div>
+
+  <!-- ================================================================ -->
+  <!-- PAGE: CONTACT -->
+  <!-- ================================================================ -->
+
+  <!-- Hero -->
+  <section class="page-hero" aria-label="Contact hero">
+    <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=1600&q=85&fit=crop&crop=center"
+      alt="Our T-shirt print studio" class="page-hero-img">
+    <div class="page-hero-grad"></div>
+    <span class="page-hero-word" aria-hidden="true">CONTACT</span>
+    <div class="page-hero-content">
+      <span class="section-label">Get In Touch</span>
+      <h1 class="section-title" style="font-size:clamp(54px,9vw,120px)">LET'S<br>CREATE</h1>
+      <p class="section-sub">Your custom T-shirt journey starts with a conversation. Tell us what you have in mind.</p>
+    </div>
+  </section>
+
+  <!-- Contact Form Section -->
+  <div class="contact-layout">
+    <div class="contact-form-card reveal">
+      <h2>GET A FREE QUOTE</h2>
+      <p class="form-intro">Fill out the form and we'll get back to you within 4 business hours.</p>
+      <form id="contactForm" onsubmit="handleSubmit(event)" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="inp-name">Full Name</label>
+            <input type="text" id="inp-name" name="name" placeholder="Your name" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="inp-email">Email Address</label>
+            <input type="email" id="inp-email" name="email" placeholder="your@email.com" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="inp-phone">Phone Number</label>
+            <input type="tel" id="inp-phone" name="phone" placeholder="+91 98765 43210">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="inp-type">Order Type</label>
+            <select id="inp-type" name="type">
+              <option value="">Select type…</option>
+              <option>Custom Print</option>
+              <option>Bulk Corporate</option>
+              <option>Event Merchandise</option>
+              <option>Personalized Tee</option>
+              <option>Brand Merchandise</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="inp-qty">Quantity</label>
+          <input type="text" id="inp-qty" name="qty" placeholder="e.g. 50 pieces, or a single order">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="inp-subject">Subject</label>
+          <input type="text" id="inp-subject" name="subject" placeholder="What is this regarding?" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="inp-message">Message / Requirements</label>
+          <textarea id="inp-message" name="message"
+            placeholder="Tell us about your design vision, deadline, fabric preferences, and any other details…" required></textarea>
+        </div>
+        <button type="submit" class="form-submit">
+          Send My Request
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12" />
+            <polyline points="12 5 19 12 12 19" />
+          </svg>
+        </button>
+      </form>
+      <div id="formSuccess">
+        <p>✓ Message Sent Successfully!</p>
+        <p>We'll get back to you within 4 business hours.</p>
+      </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="contact-sidebar reveal">
+      <h3>REACH US DIRECTLY</h3>
+      
+      <div class="cinfo-item">
+        <div class="cinfo-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+            <polyline points="22,6 12,13 2,6" />
+          </svg>
+        </div>
+        <div class="cinfo-text">
+          <strong>Email Us</strong>
+          <span><a href="mailto:hello@tshirt.in" style="color:inherit">hello@tshirt.in</a><br><a
+              href="mailto:orders@tshirt.in" style="color:inherit">orders@tshirt.in</a></span>
+        </div>
+      </div>
+
+      <div class="cinfo-item">
+        <div class="cinfo-icon">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.72A2 2 0 012.18 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.16a16 16 0 006.63 6.63l1.42-1.42a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
+          </svg>
+        </div>
+        <div class="cinfo-text">
+          <strong>Call / WhatsApp</strong>
+          <span><a href="tel:+919876543210" style="color:inherit">+91 98765 43210</a><br>Mon–Sat: 9am–7pm IST</span>
+        </div>
+      </div>
+
+      <div class="cinfo-item">
+        <div class="cinfo-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+            <circle cx="12" cy="10" r="3" />
+          </svg>
+        </div>
+        <div class="cinfo-text">
+          <strong>Studio Address</strong>
+          <span>42, Printing Hub Complex<br>Andheri East, Mumbai — 400069</span>
+        </div>
+      </div>
+
+      <div class="cinfo-item">
+        <div class="cinfo-icon">
+          <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10" />
+            <polyline points="12 6 12 12 16 14" />
+          </svg>
+        </div>
+        <div class="cinfo-text">
+          <strong>Business Hours</strong>
+          <span>Monday – Saturday: 9:00am – 7:00pm<br>Sunday: Closed</span>
+        </div>
+      </div>
+
+      <span class="social-follow-label">Follow Us</span>
+      <div class="social-follow-row">
+        <a href="https://instagram.com/tshirtbranding" target="_blank" rel="noopener" class="social-follow-btn">
+          <svg viewBox="0 0 24 24">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke-width="3" />
+          </svg>
+          Instagram
+        </a>
+        <a href="https://facebook.com/tshirtbranding" target="_blank" rel="noopener" class="social-follow-btn">
+          <svg viewBox="0 0 24 24">
+            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
+          </svg>
+          Facebook
+        </a>
+        <a href="https://wa.me/919876543210" target="_blank" rel="noopener" class="social-follow-btn">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" />
+            </svg>
+            WhatsApp
+          </a>
+        <a href="https://pinterest.com/tshirtbranding" target="_blank" rel="noopener" class="social-follow-btn">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M12 2a10 10 0 00-3.6 19.3c-.1-.9-.2-2.3.1-3.3.2-.8 1.5-6.4 1.5-6.4s-.4-.8-.4-1.9c0-1.8 1-3.1 2.3-3.1 1.1 0 1.6.8 1.6 1.8 0 1.1-.7 2.7-1 4.1-.3 1.2.6 2.2 1.8 2.2 2.1 0 3.7-2.2 3.7-5.5 0-2.9-2-4.9-4.9-4.9-3.3 0-5.3 2.5-5.3 5 0 1 .4 2 .9 2.6.1.1.1.2.1.4l-.3 1.3c-.1.2-.2.3-.4.2-1.5-.7-2.4-2.9-2.4-4.6 0-3.7 2.7-7.2 7.9-7.2 4.1 0 7.3 2.9 7.3 6.8 0 4.1-2.6 7.4-6.1 7.4-1.2 0-2.3-.6-2.7-1.3l-.7 2.8c-.3 1-.9 2.1-1.4 2.9A10 10 0 1012 2z" />
+            </svg>
+            Pinterest
+          </a>
+      </div>
+
+      <div class="wa-card">
+        <h4>LET'S CREATE YOUR CUSTOM T-SHIRT</h4>
+        <p>From a single personalized tee to 10,000-unit corporate orders — premium quality, fast delivery, zero compromise.</p>
+        <a href="https://wa.me/919876543210" target="_blank" rel="noopener" class="btn-wa">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" />
+            </svg>
+            Chat on WhatsApp
+          </a>
+        </div>
+    </div>
+  </div>
+
+  <!-- Map -->
+  <div class="map-sec">
+    <div class="map-head reveal">
+      <span class="section-label">Find Us</span>
+      <h2 class="section-title">OUR STUDIO</h2>
+    </div>
+    <div class="map-frame reveal">
+      <div class="map-inner">
+        <span class="map-pin-emoji">📍</span>
+        <p>42, Printing Hub Complex, Andheri East, Mumbai — 400069</p>
+        <a href="https://maps.google.com/?q=Andheri+East+Mumbai" target="_blank" rel="noopener" class="map-link">
+          Open in Google Maps
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+            <polyline points="15 3 21 3 21 9" />
+            <line x1="10" y1="14" x2="21" y2="3" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <section class="cta-band">
+    <span class="section-label" style="display:block;text-align:center">Let's Work Together</span>
+    <h2 class="section-title">READY TO WEAR YOUR BRAND?</h2>
+    <p class="section-sub">Premium quality. Fast turnaround. Zero compromise — from 1 tee to 10,000.</p>
+    <div class="cta-btns">
+      <a href="products.html" class="btn-primary">View Collection</a>
+      <a href="services.html" class="btn-outline">Our Services</a>
+    </div>
+  </section>
+
+  <!-- ================================================================ -->
+  <!-- SHARED FOOTER -->
+  <!-- ================================================================ -->
+  <footer id="siteFooter">
+    <div class="footer-top">
+      <div>
+        <a href="index.html" class="footer-logo">T<span class="o">-</span>SHIRT</a>
+        <p class="footer-desc">Premium printed, personalized, and customized T-shirts for individuals, brands, creators, events, and businesses. Wear your identity.</p>
+        <div class="newsletter-wrap">
+          <input type="email" id="newsletter-email" placeholder="Your email address" aria-label="Newsletter email">
+          <button onclick="subscribeNewsletter()">Subscribe</button>
+        </div>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Quick Links</p>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Customer Care</p>
+        <ul>
+          <li><a href="track-order.html">Track Your Order</a></li>
+          <li><a href="returns.html">Returns &amp; Exchanges</a></li>
+          <li><a href="shipping.html">Shipping Policy</a></li>
+          <li><a href="contact.html">Help &amp; Support</a></li>
+          
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Contact</p>
+        <ul>
+          <li><a href="mailto:hello@tshirt.in">hello@tshirt.in</a></li>
+          <li><a href="tel:+919876543210">+91 98765 43210</a></li>
+          <li><a href="https://wa.me/919876543210" target="_blank" rel="noopener">WhatsApp Us</a></li>
+          <li><a href="https://maps.google.com/?q=Andheri+East+Mumbai" target="_blank" rel="noopener">Mumbai, India</a></li>
+          <li><a href="contact.html">Mon–Sat 9am–7pm</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 T-SHIRT. All rights reserved. Premium Custom Apparel. · <a href="returns.html" style="color:var(--white-45)">Return Policy</a> · <a href="shipping.html" style="color:var(--white-45)">Shipping</a></p>
+      <div class="social-row">
+        <a href="https://instagram.com/tshirtbranding" target="_blank" rel="noopener" class="social-btn" aria-label="Instagram">
+          <svg viewBox="0 0 24 24">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke-width="3" />
+          </svg>
+        </a>
+        <a href="https://facebook.com/tshirtbranding" target="_blank" rel="noopener" class="social-btn" aria-label="Facebook">
+          <svg viewBox="0 0 24 24">
+            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
+          </svg>
+        </a>
+        <a href="https://wa.me/919876543210" target="_blank" rel="noopener" class="social-btn" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" />
+            </svg>
+          </a>
+        <a href="https://pinterest.com/tshirtbranding" target="_blank" rel="noopener" class="social-btn" aria-label="Pinterest">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M12 2a10 10 0 00-3.6 19.3c-.1-.9-.2-2.3.1-3.3.2-.8 1.5-6.4 1.5-6.4s-.4-.8-.4-1.9c0-1.8 1-3.1 2.3-3.1 1.1 0 1.6.8 1.6 1.8 0 1.1-.7 2.7-1 4.1-.3 1.2.6 2.2 1.8 2.2 2.1 0 3.7-2.2 3.7-5.5 0-2.9-2-4.9-4.9-4.9-3.3 0-5.3 2.5-5.3 5 0 1 .4 2 .9 2.6.1.1.1.2.1.4l-.3 1.3c-.1.2-.2.3-.4.2-1.5-.7-2.4-2.9-2.4-4.6 0-3.7 2.7-7.2 7.9-7.2 4.1 0 7.3 2.9 7.3 6.8 0 4.1-2.6 7.4-6.1 7.4-1.2 0-2.3-.6-2.7-1.3l-.7 2.8c-.3 1-.9 2.1-1.4 2.9A10 10 0 1012 2z" />
+            </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ====== SIDEBAR CART ====== -->
+  <div class="cart-overlay" id="cartOverlay" onclick="closeSidebarCart()"></div>
+  <div class="cart-sidebar" id="cartSidebar">
+    <div class="sc-header">
+      <div><span class="sc-title">YOUR CART</span><span class="sc-count" id="sidebarCartCount">0</span></div>
+      <button type="button" class="sc-close" onclick="closeSidebarCart()" aria-label="Close cart">
+        <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="sc-empty" id="sidebarEmpty">
+      <svg class="sc-empty-icon" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+      <p>Your cart is empty</p>
+      <a href="products.html" class="btn-primary">Browse Products</a>
+    </div>
+    <div id="sidebarFilled" style="display:none;flex-direction:column;flex:1">
+      <div class="sc-items" id="sidebarCartItems"></div>
+      <div class="sc-footer">
+        <div class="sc-subtotal-row">
+          <span class="sc-subtotal-label">Subtotal</span>
+          <span class="sc-subtotal-val" id="sidebarSubtotal">₹0</span>
+        </div>
+        <div class="sc-btns">
+          <a href="cart.html" class="btn-primary">View Cart</a>
+          <a href="checkout.html" class="btn-outline">Checkout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="products-data.js"></script>
+  <script src="cart.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>

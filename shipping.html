@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shipping Policy - Free shipping on orders above ₹999. Pan-India delivery in 5-7 business days. COD available.">
+  <title>Shipping Policy - T-SHIRT | Premium Custom &amp; Printed Tees</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ====== NAVBAR ====== -->
+  <nav id="mainNav" aria-label="Primary navigation">
+    <a href="index.html" class="nav-logo">T<span class="o">-</span>SHIRT</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="cart.html" class="nav-cart" onclick="navCartClick(event)" aria-label="Cart">
+        <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        <span class="cart-badge" id="cartBadge">0</span>
+      </a>
+      <a href="contact.html" class="btn-nav">Get Quote</a>
+    </div>
+    <button class="hamburger" id="hamburger" type="button" aria-label="Open menu" aria-controls="mobileMenu" aria-expanded="false" onclick="toggleMobile()">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="products.html">Products</a>
+    <a href="contact.html">Contact</a>
+    <a href="cart.html">Cart</a>
+    <a href="contact.html" class="btn-mob">Get Quote</a>
+  </div>
+
+  <!-- Hero -->
+  <section class="page-hero" aria-label="Shipping policy hero" style="min-height:40vh">
+    <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=1600&q=85&fit=crop" alt="Shipping" class="page-hero-img">
+    <div class="page-hero-grad"></div>
+    <span class="page-hero-word" aria-hidden="true">SHIPPING</span>
+    <div class="page-hero-content">
+      <span class="section-label">Delivery Info</span>
+      <h1 class="section-title" style="font-size:clamp(54px,9vw,120px)">SHIPPING<br>POLICY</h1>
+      <p class="section-sub">Fast, reliable delivery across India. Free shipping on orders above ₹999.</p>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <div class="policy-layout">
+
+    <div class="policy-intro reveal">
+      <p>We partner with India's top courier services to ensure your T-shirts reach you in perfect condition, on time, every time. Here's everything you need to know about our shipping process.</p>
+    </div>
+
+    <!-- Free Shipping Banner -->
+    <div class="shipping-highlight reveal">
+      <div class="shipping-highlight-icon">
+        <svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+      </div>
+      <div>
+        <h3>Free Shipping on Orders Above ₹999</h3>
+        <p>Enjoy free standard delivery on all prepaid orders above ₹999. No coupon needed — discount is applied automatically at checkout.</p>
+      </div>
+    </div>
+
+    <!-- Shipping Zones Table -->
+    <div class="reveal">
+      <span class="section-label">Delivery Zones</span>
+      <h2 class="section-title" style="font-size:32px;margin-bottom:8px">SHIPPING RATES & TIMELINES</h2>
+      <p class="section-sub" style="margin-bottom:0">Delivery times are calculated from the date of shipping, not the date of order.</p>
+    </div>
+
+    <div class="shipping-table-wrap reveal">
+      <table class="shipping-table">
+        <thead>
+          <tr>
+            <th>Zone</th>
+            <th>Coverage</th>
+            <th>Standard Delivery</th>
+            <th>Express Delivery</th>
+            <th>Shipping Fee</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Metro Cities</strong></td>
+            <td>Mumbai, Delhi, Bangalore, Chennai, Kolkata, Hyderabad</td>
+            <td>3–5 business days</td>
+            <td>1–2 business days</td>
+            <td>₹99 (Free above ₹999)</td>
+          </tr>
+          <tr>
+            <td><strong>Tier 1 Cities</strong></td>
+            <td>Pune, Ahmedabad, Jaipur, Lucknow, Chandigarh, etc.</td>
+            <td>4–6 business days</td>
+            <td>2–3 business days</td>
+            <td>₹99 (Free above ₹999)</td>
+          </tr>
+          <tr>
+            <td><strong>Tier 2 & 3</strong></td>
+            <td>Smaller towns and semi-urban areas</td>
+            <td>5–7 business days</td>
+            <td>3–5 business days</td>
+            <td>₹99 (Free above ₹999)</td>
+          </tr>
+          <tr>
+            <td><strong>Remote Areas</strong></td>
+            <td>Rural and hard-to-reach locations</td>
+            <td>7–10 business days</td>
+            <td>5–7 business days</td>
+            <td>₹149</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Policy Cards -->
+    <div class="policy-grid" style="margin-top:50px">
+      <div class="policy-card reveal">
+        <div class="policy-card-icon"><svg viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div>
+        <h3>Cash on Delivery (COD)</h3>
+        <p>COD is available across India. A ₹49 COD handling fee applies to all cash-on-delivery orders. Available for orders up to ₹5,000.</p>
+      </div>
+      <div class="policy-card reveal">
+        <div class="policy-card-icon"><svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div>
+        <h3>Packaging</h3>
+        <p>All T-shirts are carefully folded, wrapped in tissue paper, and packed in sturdy branded boxes to prevent damage during transit.</p>
+      </div>
+      <div class="policy-card reveal">
+        <div class="policy-card-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <h3>Order Processing</h3>
+        <p>Orders placed before 2 PM are processed the same day. Custom and bulk orders may take 2–3 additional business days for production.</p>
+      </div>
+      <div class="policy-card reveal">
+        <div class="policy-card-icon"><svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
+        <h3>Order Tracking</h3>
+        <p>Once your order ships, you'll receive a tracking ID via email and SMS. Track your order anytime on our <a href="track-order.html" style="color:var(--orange)">Order Tracking</a> page.</p>
+      </div>
+    </div>
+
+    <!-- Bulk Orders -->
+    <div class="shipping-highlight reveal" style="margin-top:10px">
+      <div class="shipping-highlight-icon">
+        <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+      </div>
+      <div>
+        <h3>Bulk Order Shipping</h3>
+        <p>For bulk orders (50+ units), we offer special discounted shipping rates and dedicated logistics support. Contact us for a custom shipping quote.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- CTA -->
+  <section class="cta-band">
+    <span class="section-label" style="display:block;text-align:center">Track Your Package</span>
+    <h2 class="section-title">WHERE'S MY ORDER?</h2>
+    <p class="section-sub">Already placed an order? Track it in real-time with your Order ID.</p>
+    <div class="cta-btns">
+      <a href="track-order.html" class="btn-primary">Track My Order</a>
+      <a href="contact.html" class="btn-outline">Contact Support</a>
+    </div>
+  </section>
+
+  <!-- Sidebar Cart -->
+  <div class="cart-overlay" id="cartOverlay" onclick="closeSidebarCart()"></div>
+  <div class="cart-sidebar" id="cartSidebar">
+    <div class="sc-header">
+      <div><span class="sc-title">YOUR CART</span><span class="sc-count" id="sidebarCartCount">0</span></div>
+      <button type="button" class="sc-close" onclick="closeSidebarCart()" aria-label="Close cart">
+        <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="sc-empty" id="sidebarEmpty">
+      <svg class="sc-empty-icon" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+      <p>Your cart is empty</p>
+      <a href="products.html" class="btn-primary">Browse Products</a>
+    </div>
+    <div id="sidebarFilled" style="display:none;flex-direction:column;flex:1">
+      <div class="sc-items" id="sidebarCartItems"></div>
+      <div class="sc-footer">
+        <div class="sc-subtotal-row">
+          <span class="sc-subtotal-label">Subtotal</span>
+          <span class="sc-subtotal-val" id="sidebarSubtotal">₹0</span>
+        </div>
+        <div class="sc-btns">
+          <a href="cart.html" class="btn-primary">View Cart</a>
+          <a href="checkout.html" class="btn-outline">Checkout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer id="siteFooter">
+    <div class="footer-top">
+      <div>
+        <a href="index.html" class="footer-logo">T<span class="o">-</span>SHIRT</a>
+        <p class="footer-desc">Premium printed, personalized, and customized T-shirts for individuals, brands, creators, events, and businesses. Wear your identity.</p>
+        <div class="newsletter-wrap">
+          <input type="email" id="newsletter-email" placeholder="Your email address" aria-label="Newsletter email">
+          <button onclick="subscribeNewsletter()">Subscribe</button>
+        </div>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Quick Links</p>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Customer Care</p>
+        <ul>
+          <li><a href="track-order.html">Track Your Order</a></li>
+          <li><a href="returns.html">Returns & Exchanges</a></li>
+          <li><a href="shipping.html">Shipping Policy</a></li>
+          <li><a href="contact.html">Help & Support</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Contact</p>
+        <ul>
+          <li><a href="mailto:hello@tshirt.in">hello@tshirt.in</a></li>
+          <li><a href="tel:+919876543210">+91 98765 43210</a></li>
+          <li><a href="https://wa.me/919876543210" target="_blank" rel="noopener">WhatsApp Us</a></li>
+          <li><a href="https://maps.google.com/?q=Andheri+East+Mumbai" target="_blank" rel="noopener">Mumbai, India</a></li>
+          <li><a href="contact.html">Mon–Sat 9am–7pm</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 T-SHIRT. All rights reserved. Premium Custom Apparel. · <a href="returns.html" style="color:var(--white-45)">Return Policy</a> · <a href="shipping.html" style="color:var(--white-45)">Shipping</a></p>
+      <div class="social-row">
+        <a href="https://instagram.com/tshirtbranding" target="_blank" rel="noopener" class="social-btn" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke-width="3"/></svg></a>
+        <a href="https://facebook.com/tshirtbranding" target="_blank" rel="noopener" class="social-btn" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+        <a href="https://wa.me/919876543210" target="_blank" rel="noopener" class="social-btn" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg></a>
+        <a href="https://pinterest.com/tshirtbranding" target="_blank" rel="noopener" class="social-btn" aria-label="Pinterest"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-3.6 19.3c-.1-.9-.2-2.3.1-3.3.2-.8 1.5-6.4 1.5-6.4s-.4-.8-.4-1.9c0-1.8 1-3.1 2.3-3.1 1.1 0 1.6.8 1.6 1.8 0 1.1-.7 2.7-1 4.1-.3 1.2.6 2.2 1.8 2.2 2.1 0 3.7-2.2 3.7-5.5 0-2.9-2-4.9-4.9-4.9-3.3 0-5.3 2.5-5.3 5 0 1 .4 2 .9 2.6.1.1.1.2.1.4l-.3 1.3c-.1.2-.2.3-.4.2-1.5-.7-2.4-2.9-2.4-4.6 0-3.7 2.7-7.2 7.9-7.2 4.1 0 7.3 2.9 7.3 6.8 0 4.1-2.6 7.4-6.1 7.4-1.2 0-2.3-.6-2.7-1.3l-.7 2.8c-.3 1-.9 2.1-1.4 2.9A10 10 0 1012 2z"/></svg></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="products-data.js"></script>
+  <script src="cart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
