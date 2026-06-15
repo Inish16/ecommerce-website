@@ -1343,3 +1343,114 @@ function scrollSlider(sliderId, direction) {
   }
 }
 
+/* ========== AUTH & ACCOUNTS ========== */
+
+var USER_KEY = 'tshirt_current_user';
+var USERS_DB_KEY = 'tshirt_users_db';
+
+function getDbUsers() {
+  try {
+    return JSON.parse(localStorage.getItem(USERS_DB_KEY)) || [];
+  } catch(e) { return []; }
+}
+
+function saveDbUsers(users) {
+  localStorage.setItem(USERS_DB_KEY, JSON.stringify(users));
+}
+
+function getCurrentUser() {
+  try {
+    return JSON.parse(localStorage.getItem(USER_KEY)) || null;
+  } catch(e) { return null; }
+}
+
+function loginUser(email, password) {
+  var users = getDbUsers();
+  var user = users.find(function(u) { return u.email === email && u.password === password; });
+  if (user) {
+    localStorage.setItem(USER_KEY, JSON.stringify(user));
+    return true;
+  }
+  return false;
+}
+
+function registerUser(userObj) {
+  var users = getDbUsers();
+  if (users.find(function(u) { return u.email === userObj.email; })) return false;
+  userObj.id = 'USR-' + Date.now();
+  userObj.addresses = [];
+  users.push(userObj);
+  saveDbUsers(users);
+  localStorage.setItem(USER_KEY, JSON.stringify(userObj));
+  return true;
+}
+
+function logoutUser() {
+  localStorage.removeItem(USER_KEY);
+  window.location.href = 'index.html';
+}
+
+function updateCurrentUser(newData) {
+  var currentUser = getCurrentUser();
+  if (!currentUser) return;
+  var users = getDbUsers();
+  var index = users.findIndex(function(u) { return u.id === currentUser.id; });
+  if (index !== -1) {
+    users[index] = Object.assign({}, users[index], newData);
+    saveDbUsers(users);
+    localStorage.setItem(USER_KEY, JSON.stringify(users[index]));
+  }
+}
+
+function mockGoogleLogin() {
+  var mockUser = {
+    email: 'googleuser@example.com',
+    name: 'Google User',
+    phone: '1234567890',
+    password: 'mock_google_pwd'
+  };
+  var users = getDbUsers();
+  var existing = users.find(function(u) { return u.email === mockUser.email; });
+  if (existing) {
+    localStorage.setItem(USER_KEY, JSON.stringify(existing));
+  } else {
+    registerUser(mockUser);
+  }
+  window.location.href = 'account.html';
+}
+
+function updateNavForAuth() {
+  var currentUser = getCurrentUser();
+  var actionsContainer = document.querySelector('.nav-actions');
+  if (!actionsContainer) return;
+  
+  var getQuoteBtn = actionsContainer.querySelector('.btn-nav');
+  var existingUserBtn = actionsContainer.querySelector('.nav-user-btn');
+  var existingLoginBtn = actionsContainer.querySelector('.nav-login-btn');
+  
+  if (currentUser) {
+    if (getQuoteBtn) getQuoteBtn.style.display = 'none';
+    if (existingLoginBtn) existingLoginBtn.remove();
+    if (!existingUserBtn) {
+      var userLink = document.createElement('a');
+      userLink.href = 'account.html';
+      userLink.className = 'nav-user-btn';
+      userLink.setAttribute('aria-label', 'My Account');
+      userLink.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>';
+      actionsContainer.appendChild(userLink);
+    }
+  } else {
+    if (getQuoteBtn) getQuoteBtn.style.display = 'none'; // Replaced Get Quote with Login/Profile
+    if (existingUserBtn) existingUserBtn.remove();
+    if (!existingLoginBtn) {
+      var loginLink = document.createElement('a');
+      loginLink.href = 'login.html';
+      loginLink.className = 'nav-login-btn';
+      loginLink.setAttribute('aria-label', 'Login');
+      loginLink.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path><polyline points="10 17 15 12 10 7"></polyline><line x1="15" y1="12" x2="3" y2="12"></line></svg>';
+      actionsContainer.appendChild(loginLink);
+    }
+  }
+}
+
+document.addEventListener('DOMContentLoaded', updateNavForAuth);
