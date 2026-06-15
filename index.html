@@ -31,7 +31,11 @@
     </ul>
     <div class="nav-actions">
       <a href="cart.html" class="nav-cart" onclick="navCartClick(event)" aria-label="Cart">
-        <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        <svg viewBox="0 0 24 24">
+          <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
+          <line x1="3" y1="6" x2="21" y2="6" />
+          <path d="M16 10a4 4 0 01-8 0" />
+        </svg>
         <span class="cart-badge" id="cartBadge">0</span>
       </a>
       <a href="contact.html" class="btn-nav">Get Quote</a>
@@ -110,23 +114,26 @@
       <h2 class="section-title">THE COLLECTIONS</h2>
       <p class="section-sub">Explore our curated collections designed for every vibe, season, and occasion.</p>
     </div>
-    
+
     <div class="collections-grid">
       <!-- Collection 1 -->
       <div class="collection-card reveal">
-        <img src="https://images.unsplash.com/photo-1519722417352-7d6959729417?q=80&w=600&auto=format&fit=crop" alt="Azure Swim & Beachwear Collection" class="collection-bg-img">
+        <img src="https://images.unsplash.com/photo-1519722417352-7d6959729417?q=80&w=600&auto=format&fit=crop"
+          alt="Azure Swim & Beachwear Collection" class="collection-bg-img">
         <div class="collection-overlay"></div>
         <div class="collection-content">
           <p class="collection-tag">Summer Release</p>
           <h3 class="collection-name">Azure Swim &amp; Beachwear</h3>
-          <p class="collection-desc">Sun-soaked styles featuring premium bikinis, resort cover-ups, and western vacation dresses.</p>
+          <p class="collection-desc">Sun-soaked styles featuring premium bikinis, resort cover-ups, and western vacation
+            dresses.</p>
           <a href="products.html?audience=women&category=bikini" class="collection-link">Explore Collection →</a>
         </div>
       </div>
-      
+
       <!-- Collection 2 -->
       <div class="collection-card reveal">
-        <img src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?q=80&w=600&auto=format&fit=crop" alt="Urban Street Aesthetics Collection" class="collection-bg-img">
+        <img src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?q=80&w=600&auto=format&fit=crop"
+          alt="Urban Street Aesthetics Collection" class="collection-bg-img">
         <div class="collection-overlay"></div>
         <div class="collection-content">
           <p class="collection-tag">Streetwear Drop</p>
@@ -135,10 +142,11 @@
           <a href="products.html?audience=all&category=tshirts" class="collection-link">Explore Collection →</a>
         </div>
       </div>
-      
+
       <!-- Collection 3 -->
       <div class="collection-card reveal">
-        <img src="https://images.unsplash.com/photo-1479064555552-3ef4979f8908?q=80&w=600&auto=format&fit=crop" alt="Minimalist Comfort Collection" class="collection-bg-img">
+        <img src="https://images.unsplash.com/photo-1479064555552-3ef4979f8908?q=80&w=600&auto=format&fit=crop"
+          alt="Minimalist Comfort Collection" class="collection-bg-img">
         <div class="collection-overlay"></div>
         <div class="collection-content">
           <p class="collection-tag">Premium Classics</p>
@@ -146,6 +154,37 @@
           <p class="collection-desc">Breathable linen shirts, lightweight button-down blazers, and tailored chinos.</p>
           <a href="products.html?audience=all&category=shirts" class="collection-link">Explore Collection →</a>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bestsellers Section -->
+  <section class="products-section slider-section" id="bestsellersSection">
+    <div class="products-header">
+      <div class="reveal">
+        <span class="section-label">Popular Demands</span>
+        <h2 class="section-title">BESTSELLERS</h2>
+      </div>
+      <div class="slider-controls">
+        <button type="button" class="slider-arrow prev" onclick="scrollSlider('bestsellersSlider', -1)"
+          aria-label="Previous Products">
+          <svg viewBox="0 0 24 24" width="20" height="20">
+            <polyline points="15 18 9 12 15 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </button>
+        <button type="button" class="slider-arrow next" onclick="scrollSlider('bestsellersSlider', 1)"
+          aria-label="Next Products">
+          <svg viewBox="0 0 24 24" width="20" height="20">
+            <polyline points="9 18 15 12 9 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="slider-container-wrap">
+      <div class="product-slider" id="bestsellersSlider">
+        <!-- Rendered dynamically -->
       </div>
     </div>
   </section>
@@ -263,39 +302,24 @@
         <h2 class="section-title">LATEST DROPS</h2>
       </div>
       <div class="slider-controls">
-        <button type="button" class="slider-arrow prev" onclick="scrollSlider('latestDropsSlider', -1)" aria-label="Previous Products">
-          <svg viewBox="0 0 24 24" width="20" height="20"><polyline points="15 18 9 12 15 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <button type="button" class="slider-arrow prev" onclick="scrollSlider('latestDropsSlider', -1)"
+          aria-label="Previous Products">
+          <svg viewBox="0 0 24 24" width="20" height="20">
+            <polyline points="15 18 9 12 15 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
         </button>
-        <button type="button" class="slider-arrow next" onclick="scrollSlider('latestDropsSlider', 1)" aria-label="Next Products">
-          <svg viewBox="0 0 24 24" width="20" height="20"><polyline points="9 18 15 12 9 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <button type="button" class="slider-arrow next" onclick="scrollSlider('latestDropsSlider', 1)"
+          aria-label="Next Products">
+          <svg viewBox="0 0 24 24" width="20" height="20">
+            <polyline points="9 18 15 12 9 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
         </button>
       </div>
     </div>
     <div class="slider-container-wrap">
       <div class="product-slider" id="latestDropsSlider">
-        <!-- Rendered dynamically -->
-      </div>
-    </div>
-  </section>
-
-  <!-- Bestsellers Section -->
-  <section class="products-section slider-section" id="bestsellersSection">
-    <div class="products-header">
-      <div class="reveal">
-        <span class="section-label">Popular Demands</span>
-        <h2 class="section-title">BESTSELLERS</h2>
-      </div>
-      <div class="slider-controls">
-        <button type="button" class="slider-arrow prev" onclick="scrollSlider('bestsellersSlider', -1)" aria-label="Previous Products">
-          <svg viewBox="0 0 24 24" width="20" height="20"><polyline points="15 18 9 12 15 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
-        <button type="button" class="slider-arrow next" onclick="scrollSlider('bestsellersSlider', 1)" aria-label="Next Products">
-          <svg viewBox="0 0 24 24" width="20" height="20"><polyline points="9 18 15 12 9 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
-      </div>
-    </div>
-    <div class="slider-container-wrap">
-      <div class="product-slider" id="bestsellersSlider">
         <!-- Rendered dynamically -->
       </div>
     </div>
@@ -309,11 +333,19 @@
         <h2 class="section-title">SUMMER COLLECTION</h2>
       </div>
       <div class="slider-controls">
-        <button type="button" class="slider-arrow prev" onclick="scrollSlider('summerSlider', -1)" aria-label="Previous Products">
-          <svg viewBox="0 0 24 24" width="20" height="20"><polyline points="15 18 9 12 15 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <button type="button" class="slider-arrow prev" onclick="scrollSlider('summerSlider', -1)"
+          aria-label="Previous Products">
+          <svg viewBox="0 0 24 24" width="20" height="20">
+            <polyline points="15 18 9 12 15 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
         </button>
-        <button type="button" class="slider-arrow next" onclick="scrollSlider('summerSlider', 1)" aria-label="Next Products">
-          <svg viewBox="0 0 24 24" width="20" height="20"><polyline points="9 18 15 12 9 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <button type="button" class="slider-arrow next" onclick="scrollSlider('summerSlider', 1)"
+          aria-label="Next Products">
+          <svg viewBox="0 0 24 24" width="20" height="20">
+            <polyline points="9 18 15 12 9 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
         </button>
       </div>
     </div>
@@ -439,7 +471,7 @@
           <li><a href="returns.html">Returns &amp; Exchanges</a></li>
           <li><a href="shipping.html">Shipping Policy</a></li>
           <li><a href="contact.html">Help &amp; Support</a></li>
-          
+
         </ul>
       </div>
       <div class="footer-col">
@@ -455,7 +487,9 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p class="footer-copy">© 2026 T-SHIRT. All rights reserved. Premium Custom Apparel. · <a href="returns.html" style="color:var(--white-45)">Return Policy</a> · <a href="shipping.html" style="color:var(--white-45)">Shipping</a></p>
+      <p class="footer-copy">© 2026 T-SHIRT. All rights reserved. Premium Custom Apparel. · <a href="returns.html"
+          style="color:var(--white-45)">Return Policy</a> · <a href="shipping.html"
+          style="color:var(--white-45)">Shipping</a></p>
       <div class="social-row">
         <a href="https://instagram.com/tshirtbranding" target="_blank" rel="noopener" class="social-btn"
           aria-label="Instagram">
@@ -494,11 +528,18 @@
     <div class="sc-header">
       <div><span class="sc-title">YOUR CART</span><span class="sc-count" id="sidebarCartCount">0</span></div>
       <button type="button" class="sc-close" onclick="closeSidebarCart()" aria-label="Close cart">
-        <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        <svg viewBox="0 0 24 24">
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
       </button>
     </div>
     <div class="sc-empty" id="sidebarEmpty">
-      <svg class="sc-empty-icon" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+      <svg class="sc-empty-icon" viewBox="0 0 24 24">
+        <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
+        <line x1="3" y1="6" x2="21" y2="6" />
+        <path d="M16 10a4 4 0 01-8 0" />
+      </svg>
       <p>Your cart is empty</p>
       <a href="products.html" class="btn-primary">Browse Products</a>
     </div>
@@ -522,4 +563,5 @@
   <script src="script.js"></script>
 
 </body>
+
 </html>
