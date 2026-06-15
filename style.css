@@ -1050,6 +1050,23 @@ select {
   position: absolute;
   inset: 0;
   background: linear-gradient(to top, rgba(15, 15, 15, 0.95) 0%, rgba(15, 15, 15, 0.08) 55%, transparent 100%);
+  pointer-events: none;
+}
+
+.product-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: var(--orange);
+  color: var(--white);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: var(--radius);
+  z-index: 2;
+  box-shadow: 0 4px 12px rgba(255, 107, 0, 0.3);
 }
 
 .product-info {
