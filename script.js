@@ -1456,31 +1456,63 @@ function mockGoogleLogin() {
 function updateNavForAuth() {
   var currentUser = getCurrentUser();
   var actionsContainer = document.querySelector('.nav-actions');
-  if (!actionsContainer) return;
+  var mobileMenu = document.getElementById('mobileMenu');
   
-  var getQuoteBtn = actionsContainer.querySelector('.btn-nav');
-  var existingUserBtn = actionsContainer.querySelector('.nav-user-btn');
-  var existingLoginBtn = actionsContainer.querySelector('.nav-login-btn');
-  
-  if (currentUser) {
-    if (getQuoteBtn) getQuoteBtn.style.display = 'none';
-    if (existingLoginBtn) existingLoginBtn.remove();
-    if (!existingUserBtn) {
-      var userLink = document.createElement('a');
-      userLink.href = 'account.html';
-      userLink.className = 'nav-user-btn btn-nav';
-      userLink.textContent = 'My Account';
-      actionsContainer.appendChild(userLink);
+  // Desktop Nav
+  if (actionsContainer) {
+    var getQuoteBtn = Array.from(actionsContainer.querySelectorAll('.btn-nav')).find(el => !el.classList.contains('nav-user-btn') && !el.classList.contains('nav-login-btn'));
+    var existingUserBtn = actionsContainer.querySelector('.nav-user-btn');
+    var existingLoginBtn = actionsContainer.querySelector('.nav-login-btn');
+    
+    if (currentUser) {
+      if (getQuoteBtn) getQuoteBtn.style.display = 'none';
+      if (existingLoginBtn) existingLoginBtn.remove();
+      if (!existingUserBtn) {
+        var userLink = document.createElement('a');
+        userLink.href = 'account.html';
+        userLink.className = 'nav-user-btn btn-nav';
+        userLink.textContent = 'My Account';
+        actionsContainer.appendChild(userLink);
+      }
+    } else {
+      if (getQuoteBtn) getQuoteBtn.style.display = 'none';
+      if (existingUserBtn) existingUserBtn.remove();
+      if (!existingLoginBtn) {
+        var loginLink = document.createElement('a');
+        loginLink.href = 'login.html';
+        loginLink.className = 'nav-login-btn btn-nav';
+        loginLink.textContent = 'Log In';
+        actionsContainer.appendChild(loginLink);
+      }
     }
-  } else {
-    if (getQuoteBtn) getQuoteBtn.style.display = 'none'; // Replaced Get Quote with Login
-    if (existingUserBtn) existingUserBtn.remove();
-    if (!existingLoginBtn) {
-      var loginLink = document.createElement('a');
-      loginLink.href = 'login.html';
-      loginLink.className = 'nav-login-btn btn-nav';
-      loginLink.textContent = 'Log In';
-      actionsContainer.appendChild(loginLink);
+  }
+
+  // Mobile Nav
+  if (mobileMenu) {
+    var getQuoteMob = Array.from(mobileMenu.querySelectorAll('.btn-mob')).find(el => !el.classList.contains('mob-user-btn') && !el.classList.contains('mob-login-btn'));
+    var existingMobUser = mobileMenu.querySelector('.mob-user-btn');
+    var existingMobLogin = mobileMenu.querySelector('.mob-login-btn');
+    
+    if (currentUser) {
+      if (getQuoteMob) getQuoteMob.style.display = 'none';
+      if (existingMobLogin) existingMobLogin.remove();
+      if (!existingMobUser) {
+        var mobUserLink = document.createElement('a');
+        mobUserLink.href = 'account.html';
+        mobUserLink.className = 'mob-user-btn btn-mob';
+        mobUserLink.textContent = 'My Account';
+        mobileMenu.appendChild(mobUserLink);
+      }
+    } else {
+      if (getQuoteMob) getQuoteMob.style.display = 'none';
+      if (existingMobUser) existingMobUser.remove();
+      if (!existingMobLogin) {
+        var mobLoginLink = document.createElement('a');
+        mobLoginLink.href = 'login.html';
+        mobLoginLink.className = 'mob-login-btn btn-mob';
+        mobLoginLink.textContent = 'Log In';
+        mobileMenu.appendChild(mobLoginLink);
+      }
     }
   }
 }
