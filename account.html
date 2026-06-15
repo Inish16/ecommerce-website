@@ -543,6 +543,7 @@
       // Init Slider
       if (typeof renderSliderItems === 'function') {
         renderSliderItems('recSlider', PRODUCTS.slice(0, 4));
+        if (typeof attachReveal === 'function') attachReveal();
       }
     });
 
