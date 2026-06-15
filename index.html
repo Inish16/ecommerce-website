@@ -107,6 +107,37 @@
     </div>
   </div>
 
+  <!-- Bestsellers Section -->
+  <section class="products-section slider-section" id="bestsellersSection">
+    <div class="products-header">
+      <div class="reveal">
+        <span class="section-label">Popular Demands</span>
+        <h2 class="section-title">BESTSELLERS</h2>
+      </div>
+      <div class="slider-controls">
+        <button type="button" class="slider-arrow prev" onclick="scrollSlider('bestsellersSlider', -1)"
+          aria-label="Previous Products">
+          <svg viewBox="0 0 24 24" width="20" height="20">
+            <polyline points="15 18 9 12 15 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </button>
+        <button type="button" class="slider-arrow next" onclick="scrollSlider('bestsellersSlider', 1)"
+          aria-label="Next Products">
+          <svg viewBox="0 0 24 24" width="20" height="20">
+            <polyline points="9 18 15 12 9 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="slider-container-wrap">
+      <div class="product-slider" id="bestsellersSlider">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </section>
+
   <!-- ====== COLLECTIONS SECTION ====== -->
   <section class="collections-section">
     <div class="reveal">
@@ -154,37 +185,6 @@
           <p class="collection-desc">Breathable linen shirts, lightweight button-down blazers, and tailored chinos.</p>
           <a href="products.html?audience=all&category=shirts" class="collection-link">Explore Collection →</a>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Bestsellers Section -->
-  <section class="products-section slider-section" id="bestsellersSection">
-    <div class="products-header">
-      <div class="reveal">
-        <span class="section-label">Popular Demands</span>
-        <h2 class="section-title">BESTSELLERS</h2>
-      </div>
-      <div class="slider-controls">
-        <button type="button" class="slider-arrow prev" onclick="scrollSlider('bestsellersSlider', -1)"
-          aria-label="Previous Products">
-          <svg viewBox="0 0 24 24" width="20" height="20">
-            <polyline points="15 18 9 12 15 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"
-              stroke-linejoin="round" />
-          </svg>
-        </button>
-        <button type="button" class="slider-arrow next" onclick="scrollSlider('bestsellersSlider', 1)"
-          aria-label="Next Products">
-          <svg viewBox="0 0 24 24" width="20" height="20">
-            <polyline points="9 18 15 12 9 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"
-              stroke-linejoin="round" />
-          </svg>
-        </button>
-      </div>
-    </div>
-    <div class="slider-container-wrap">
-      <div class="product-slider" id="bestsellersSlider">
-        <!-- Rendered dynamically -->
       </div>
     </div>
   </section>
