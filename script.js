@@ -1327,6 +1327,29 @@ function renderSliderItems(containerId, products) {
     '</div>';
   });
   container.innerHTML = html;
+  
+  // Setup autoscroll
+  startAutoscroll(containerId);
+  if (!container.parentElement.hasAttribute('data-autoscroll')) {
+    container.parentElement.setAttribute('data-autoscroll', 'true');
+    container.parentElement.addEventListener('mouseenter', function() { stopAutoscroll(containerId); });
+    container.parentElement.addEventListener('mouseleave', function() { startAutoscroll(containerId); });
+    container.parentElement.addEventListener('touchstart', function() { stopAutoscroll(containerId); }, {passive: true});
+    container.parentElement.addEventListener('touchend', function() { startAutoscroll(containerId); });
+  }
+}
+
+var _sliderIntervals = {};
+
+function startAutoscroll(sliderId) {
+  if (_sliderIntervals[sliderId]) clearInterval(_sliderIntervals[sliderId]);
+  _sliderIntervals[sliderId] = setInterval(function() {
+    scrollSlider(sliderId, 1);
+  }, 4000);
+}
+
+function stopAutoscroll(sliderId) {
+  if (_sliderIntervals[sliderId]) clearInterval(_sliderIntervals[sliderId]);
 }
 
 function scrollSlider(sliderId, direction) {
@@ -1339,7 +1362,18 @@ function scrollSlider(sliderId, direction) {
       var margin = parseFloat(style.marginLeft) + parseFloat(style.marginRight);
       scrollAmount = (card.offsetWidth + (isNaN(margin) ? 24 : margin));
     }
-    slider.scrollBy({ left: scrollAmount * direction, behavior: 'smooth' });
+    
+    // Endless scroll detection
+    var isAtEnd = slider.scrollLeft + slider.clientWidth >= slider.scrollWidth - 5;
+    var isAtStart = slider.scrollLeft <= 5;
+
+    if (direction === 1 && isAtEnd) {
+      slider.scrollTo({ left: 0, behavior: 'smooth' });
+    } else if (direction === -1 && isAtStart) {
+      slider.scrollTo({ left: slider.scrollWidth, behavior: 'smooth' });
+    } else {
+      slider.scrollBy({ left: scrollAmount * direction, behavior: 'smooth' });
+    }
   }
 }
 

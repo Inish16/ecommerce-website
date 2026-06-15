@@ -508,8 +508,20 @@
     <div class="slider-header" style="display:flex; justify-content:space-between; align-items:flex-end; border-bottom:1px solid #222; padding-bottom:16px; margin-bottom:24px;">
       <h2 class="section-title" style="font-size:32px;">Recommended For You</h2>
       <div class="slider-controls">
-        <button type="button" class="slider-btn" onclick="scrollSlider('recSlider', -1)" aria-label="Previous">❮</button>
-        <button type="button" class="slider-btn" onclick="scrollSlider('recSlider', 1)" aria-label="Next">❯</button>
+        <button type="button" class="slider-arrow prev" onclick="scrollSlider('recSlider', -1)"
+          aria-label="Previous Products">
+          <svg viewBox="0 0 24 24" width="20" height="20">
+            <polyline points="15 18 9 12 15 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </button>
+        <button type="button" class="slider-arrow next" onclick="scrollSlider('recSlider', 1)"
+          aria-label="Next Products">
+          <svg viewBox="0 0 24 24" width="20" height="20">
+            <polyline points="9 18 15 12 9 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </button>
       </div>
     </div>
     <div class="slider-container-wrap">
