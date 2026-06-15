@@ -1434,20 +1434,18 @@ function updateNavForAuth() {
     if (!existingUserBtn) {
       var userLink = document.createElement('a');
       userLink.href = 'account.html';
-      userLink.className = 'nav-user-btn';
-      userLink.setAttribute('aria-label', 'My Account');
-      userLink.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>';
+      userLink.className = 'nav-user-btn btn-nav';
+      userLink.textContent = 'My Account';
       actionsContainer.appendChild(userLink);
     }
   } else {
-    if (getQuoteBtn) getQuoteBtn.style.display = 'none'; // Replaced Get Quote with Login/Profile
+    if (getQuoteBtn) getQuoteBtn.style.display = 'none'; // Replaced Get Quote with Login
     if (existingUserBtn) existingUserBtn.remove();
     if (!existingLoginBtn) {
       var loginLink = document.createElement('a');
       loginLink.href = 'login.html';
-      loginLink.className = 'nav-login-btn';
-      loginLink.setAttribute('aria-label', 'Login');
-      loginLink.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path><polyline points="10 17 15 12 10 7"></polyline><line x1="15" y1="12" x2="3" y2="12"></line></svg>';
+      loginLink.className = 'nav-login-btn btn-nav';
+      loginLink.textContent = 'Log In';
       actionsContainer.appendChild(loginLink);
     }
   }
