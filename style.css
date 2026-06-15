@@ -466,8 +466,8 @@ select {
   height: 100%;
   object-fit: cover;
   object-position: center 20%;
-  opacity: 0.40;
-  filter: contrast(1.08) saturate(0.72);
+  opacity: 0.85;
+  filter: contrast(1.08) saturate(0.85);
   animation: heroZoom 16s ease-out forwards;
 }
 
@@ -484,7 +484,7 @@ select {
 .hero-vignette {
   position: absolute;
   inset: 0;
-  background: linear-gradient(105deg, #0F0F0F 40%, rgba(15, 15, 15, 0.5) 72%, rgba(15, 15, 15, 0.08) 100%);
+  background: linear-gradient(105deg, #0F0F0F 35%, rgba(15, 15, 15, 0.4) 65%, transparent 100%);
   z-index: 1;
 }
 
